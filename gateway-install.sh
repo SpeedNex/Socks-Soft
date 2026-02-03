@@ -5,7 +5,7 @@ GATEWAY_ID=""
 SECRET=""
 REDIS="127.0.0.1:6379"
 INSTALL_DIR="/usr/local/bin"
-BASE_URL="https://github.com/SpeedNex/Socks-Soft/raw/main/bin"
+BASE_URL="https://github.com/SpeedNex/Socks-Soft/raw/main/gateway"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
