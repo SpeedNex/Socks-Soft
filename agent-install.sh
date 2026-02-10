@@ -6,7 +6,7 @@ AGENT_ID=""
 AGENT_SECRET=""
 REGION=""
 INSTALL_DIR="/usr/local/bin"
-BASE_URL="https://github.com/SpeedNex/Socks-Soft/raw/main/bin"
+BASE_URL="https://raw.githubusercontent.com/SpeedNex/Socks-Soft/main/proxy/bin"
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
