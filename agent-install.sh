@@ -7,6 +7,10 @@ AGENT_SECRET=""
 SERVER=""
 INSTALL_DIR="/usr/local/bin"
 BASE_URL="https://raw.githubusercontent.com/SpeedNex/Socks-Soft/main/proxy"
+DAEMON_MODE="false"
+PID_FILE=""
+LOG_FILE=""
+EXTRA_ARGS=()
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -22,6 +26,12 @@ while [[ $# -gt 0 ]]; do
     --server) SERVER="${2:-}"; shift 2 ;;
     --install-dir) INSTALL_DIR="${2:-}"; shift 2 ;;
     --base-url) BASE_URL="${2:-}"; shift 2 ;;
+    --daemon) DAEMON_MODE="true"; shift ;;
+    --pid-file=*) PID_FILE="${1#*=}"; shift ;;
+    --log-file=*) LOG_FILE="${1#*=}"; shift ;;
+    --pid-file) PID_FILE="${2:-}"; shift 2 ;;
+    --log-file) LOG_FILE="${2:-}"; shift 2 ;;
+    --) shift; EXTRA_ARGS+=("$@"); break ;;
     *) echo "Unknown arg: $1"; exit 1 ;;
   esac
 done
@@ -68,4 +78,34 @@ chmod +x "$BIN_PATH"
 
 echo "Starting agent..."
 RUN_ARGS=(run --server "$SERVER" --agent-id "$AGENT_ID" --secret "$AGENT_SECRET")
+RUN_ARGS+=("${EXTRA_ARGS[@]}")
+
+if [[ "$DAEMON_MODE" == "true" ]]; then
+  if [[ -z "$PID_FILE" ]]; then
+    PID_FILE="${INSTALL_DIR}/agent.pid"
+  fi
+  if [[ -z "$LOG_FILE" ]]; then
+    LOG_FILE="${INSTALL_DIR}/agent.log"
+  fi
+
+  mkdir -p "$(dirname "$PID_FILE")" "$(dirname "$LOG_FILE")"
+  if [[ -f "$PID_FILE" ]]; then
+    OLD_PID="$(cat "$PID_FILE" 2>/dev/null || true)"
+    if [[ -n "$OLD_PID" ]] && kill -0 "$OLD_PID" 2>/dev/null; then
+      echo "Agent already running with PID ${OLD_PID} (pid file: ${PID_FILE})"
+      exit 1
+    fi
+    rm -f "$PID_FILE"
+  fi
+
+  nohup "$BIN_PATH" "${RUN_ARGS[@]}" >>"$LOG_FILE" 2>&1 &
+  NEW_PID=$!
+  echo "$NEW_PID" >"$PID_FILE"
+  echo "Agent started in background."
+  echo "PID: ${NEW_PID}"
+  echo "PID file: ${PID_FILE}"
+  echo "Log file: ${LOG_FILE}"
+  exit 0
+fi
+
 exec "$BIN_PATH" "${RUN_ARGS[@]}"
