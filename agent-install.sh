@@ -4,7 +4,7 @@ set -euo pipefail
 TOKEN=""
 AGENT_ID=""
 AGENT_SECRET=""
-REGION=""
+SERVER=""
 INSTALL_DIR="/usr/local/bin"
 BASE_URL="https://raw.githubusercontent.com/SpeedNex/Socks-Soft/main/proxy"
 
@@ -13,13 +13,13 @@ while [[ $# -gt 0 ]]; do
     --token=*) TOKEN="${1#*=}"; shift ;;
     --agent-id=*) AGENT_ID="${1#*=}"; shift ;;
     --secret=*) AGENT_SECRET="${1#*=}"; shift ;;
-    --region=*) REGION="${1#*=}"; shift ;;
+    --server=*) SERVER="${1#*=}"; shift ;;
     --install-dir=*) INSTALL_DIR="${1#*=}"; shift ;;
     --base-url=*) BASE_URL="${1#*=}"; shift ;;
     --token) TOKEN="${2:-}"; shift 2 ;;
     --agent-id) AGENT_ID="${2:-}"; shift 2 ;;
     --secret) AGENT_SECRET="${2:-}"; shift 2 ;;
-    --region) REGION="${2:-}"; shift 2 ;;
+    --server) SERVER="${2:-}"; shift 2 ;;
     --install-dir) INSTALL_DIR="${2:-}"; shift 2 ;;
     --base-url) BASE_URL="${2:-}"; shift 2 ;;
     *) echo "Unknown arg: $1"; exit 1 ;;
@@ -33,6 +33,11 @@ fi
 
 if [[ -z "$AGENT_SECRET" && -z "$TOKEN" ]]; then
   echo "Missing --secret (or --token as alias)"
+  exit 1
+fi
+
+if [[ -z "$SERVER" ]]; then
+  echo "Missing --server"
   exit 1
 fi
 
@@ -62,4 +67,5 @@ curl -fsSL "$BIN_URL" -o "$BIN_PATH"
 chmod +x "$BIN_PATH"
 
 echo "Starting agent..."
-exec "$BIN_PATH" run --agent-id "$AGENT_ID" --secret "$AGENT_SECRET" --region "$REGION"
+RUN_ARGS=(run --server "$SERVER" --agent-id "$AGENT_ID" --secret "$AGENT_SECRET")
+exec "$BIN_PATH" "${RUN_ARGS[@]}"
