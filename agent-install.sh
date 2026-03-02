@@ -98,7 +98,12 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
     rm -f "$PID_FILE"
   fi
 
-  nohup "$BIN_PATH" "${RUN_ARGS[@]}" >>"$LOG_FILE" 2>&1 &
+  if [[ "$OS" == "darwin" ]] && command -v caffeinate >/dev/null 2>&1; then
+    # Keep system awake while the agent process is running.
+    nohup caffeinate -dimsu "$BIN_PATH" "${RUN_ARGS[@]}" >>"$LOG_FILE" 2>&1 &
+  else
+    nohup "$BIN_PATH" "${RUN_ARGS[@]}" >>"$LOG_FILE" 2>&1 &
+  fi
   NEW_PID=$!
   echo "$NEW_PID" >"$PID_FILE"
   echo "Agent started in background."
