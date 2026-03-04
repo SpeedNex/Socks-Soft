@@ -1,0 +1,1007 @@
+[2026/03/03 13:35:09] connecting to web server: 127.0.0.1 [failed] (Post "127.0.0.1/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 13:35:09] retrying bootstrap in 1s
+[2026/03/03 13:35:10] connecting to web server: 127.0.0.1 [failed] (Post "127.0.0.1/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 13:35:10] retrying bootstrap in 2s
+[2026/03/03 13:35:12] connecting to web server: 127.0.0.1 [failed] (Post "127.0.0.1/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 13:35:12] retrying bootstrap in 4s
+[2026/03/03 13:35:16] connecting to web server: 127.0.0.1 [failed] (Post "127.0.0.1/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 13:35:16] retrying bootstrap in 8s
+[2026/03/03 13:35:24] connecting to web server: 127.0.0.1 [failed] (Post "127.0.0.1/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 13:35:24] retrying bootstrap in 16s
+[2026/03/03 13:35:40] connecting to web server: 127.0.0.1 [failed] (Post "127.0.0.1/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 13:35:40] retrying bootstrap in 30s
+[2026/03/03 13:36:27] connecting to web server: 192.168.100.135 [failed] (Post "192.168.100.135/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 13:36:27] retrying bootstrap in 1s
+[2026/03/03 13:36:28] connecting to web server: 192.168.100.135 [failed] (Post "192.168.100.135/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 13:36:28] retrying bootstrap in 2s
+[2026/03/03 13:36:30] connecting to web server: 192.168.100.135 [failed] (Post "192.168.100.135/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 13:36:30] retrying bootstrap in 4s
+[2026/03/03 14:10:46] connecting to web server: 192.168.100.135 [failed] (Post "192.168.100.135/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 14:10:46] retrying bootstrap in 1s
+[2026/03/03 14:10:47] connecting to web server: 192.168.100.135 [failed] (Post "192.168.100.135/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 14:10:47] retrying bootstrap in 2s
+[2026/03/03 14:10:49] connecting to web server: 192.168.100.135 [failed] (Post "192.168.100.135/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 14:10:49] retrying bootstrap in 4s
+[2026/03/03 14:10:53] connecting to web server: 192.168.100.135 [failed] (Post "192.168.100.135/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 14:10:53] retrying bootstrap in 8s
+[2026/03/03 14:11:01] connecting to web server: 192.168.100.135 [failed] (Post "192.168.100.135/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 14:11:01] retrying bootstrap in 16s
+[2026/03/03 14:11:17] connecting to web server: 192.168.100.135 [failed] (Post "192.168.100.135/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 14:11:17] retrying bootstrap in 30s
+[2026/03/03 14:11:47] connecting to web server: 192.168.100.135 [failed] (Post "192.168.100.135/proxy/agent/bootstrap": unsupported protocol scheme "")
+[2026/03/03 14:11:47] retrying bootstrap in 30s
+[2026/03/03 14:12:22] connecting to web server: http://192.168.100.135 [failed] (bootstrap http status 404)
+[2026/03/03 14:12:22] retrying bootstrap in 1s
+[2026/03/03 14:12:23] connecting to web server: http://192.168.100.135 [failed] (bootstrap http status 404)
+[2026/03/03 14:12:23] retrying bootstrap in 2s
+[2026/03/03 14:12:25] connecting to web server: http://192.168.100.135 [failed] (bootstrap http status 404)
+[2026/03/03 14:12:25] retrying bootstrap in 4s
+[2026/03/03 14:12:29] connecting to web server: http://192.168.100.135 [failed] (bootstrap http status 404)
+[2026/03/03 14:12:29] retrying bootstrap in 8s
+[2026/03/03 14:12:37] connecting to web server: http://192.168.100.135 [failed] (bootstrap http status 404)
+[2026/03/03 14:12:37] retrying bootstrap in 16s
+[2026/03/03 14:12:53] connecting to web server: http://192.168.100.135 [failed] (bootstrap http status 404)
+[2026/03/03 14:12:53] retrying bootstrap in 30s
+[2026/03/03 14:13:23] connecting to web server: http://192.168.100.135 [failed] (bootstrap http status 404)
+[2026/03/03 14:13:23] retrying bootstrap in 30s
+[2026/03/03 14:13:53] connecting to web server: http://192.168.100.135 [failed] (bootstrap http status 404)
+[2026/03/03 14:13:53] retrying bootstrap in 30s
+[2026/03/03 14:14:23] connecting to web server: http://192.168.100.135 [failed] (bootstrap http status 404)
+[2026/03/03 14:14:23] retrying bootstrap in 30s
+[2026/03/03 14:14:53] connecting to web server: http://192.168.100.135 [failed] (bootstrap http status 404)
+[2026/03/03 14:14:53] retrying bootstrap in 30s
+[2026/03/03 14:17:21] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:17:21] retrying bootstrap in 1s
+[2026/03/03 14:17:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:17:22] retrying bootstrap in 2s
+[2026/03/03 14:17:24] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:17:24] retrying bootstrap in 4s
+[2026/03/03 14:17:28] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:17:28] retrying bootstrap in 8s
+[2026/03/03 14:17:36] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:17:36] retrying bootstrap in 16s
+[2026/03/03 14:17:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:17:52] retrying bootstrap in 30s
+[2026/03/03 14:18:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:18:22] retrying bootstrap in 30s
+[2026/03/03 14:18:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:18:52] retrying bootstrap in 30s
+[2026/03/03 14:19:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:19:22] retrying bootstrap in 30s
+[2026/03/03 14:19:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:19:52] retrying bootstrap in 30s
+[2026/03/03 14:20:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:20:22] retrying bootstrap in 30s
+[2026/03/03 14:20:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:20:52] retrying bootstrap in 30s
+[2026/03/03 14:21:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:21:22] retrying bootstrap in 30s
+[2026/03/03 14:21:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:21:52] retrying bootstrap in 30s
+[2026/03/03 14:22:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:22:22] retrying bootstrap in 30s
+[2026/03/03 14:22:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:22:52] retrying bootstrap in 30s
+[2026/03/03 14:23:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:23:22] retrying bootstrap in 30s
+[2026/03/03 14:23:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:23:52] retrying bootstrap in 30s
+[2026/03/03 14:24:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:24:22] retrying bootstrap in 30s
+[2026/03/03 14:24:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:24:52] retrying bootstrap in 30s
+[2026/03/03 14:25:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:25:22] retrying bootstrap in 30s
+[2026/03/03 14:25:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:25:52] retrying bootstrap in 30s
+[2026/03/03 14:26:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:26:22] retrying bootstrap in 30s
+[2026/03/03 14:26:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:26:52] retrying bootstrap in 30s
+[2026/03/03 14:27:22] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:27:22] retrying bootstrap in 30s
+[2026/03/03 14:27:52] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:27:52] retrying bootstrap in 30s
+[2026/03/03 14:28:49] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:28:49] retrying bootstrap in 30s
+[2026/03/03 14:29:19] connecting to web server: 192.168.100.135:8000 [failed] (parse "192.168.100.135:8000/proxy/agent/bootstrap": first path segment in URL cannot contain colon)
+[2026/03/03 14:29:19] retrying bootstrap in 30s
+[2026/03/03 14:29:43] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:29:43] retrying bootstrap in 1s
+[2026/03/03 14:29:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:29:44] retrying bootstrap in 2s
+[2026/03/03 14:29:46] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:29:46] retrying bootstrap in 4s
+[2026/03/03 14:29:50] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:29:50] retrying bootstrap in 8s
+[2026/03/03 14:29:58] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:29:58] retrying bootstrap in 16s
+[2026/03/03 14:30:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:30:14] retrying bootstrap in 30s
+[2026/03/03 14:30:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:30:44] retrying bootstrap in 30s
+[2026/03/03 14:31:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:31:14] retrying bootstrap in 30s
+[2026/03/03 14:31:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:31:44] retrying bootstrap in 30s
+[2026/03/03 14:32:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:32:14] retrying bootstrap in 30s
+[2026/03/03 14:32:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:32:44] retrying bootstrap in 30s
+[2026/03/03 14:33:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:33:14] retrying bootstrap in 30s
+[2026/03/03 14:33:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:33:44] retrying bootstrap in 30s
+[2026/03/03 14:34:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:34:14] retrying bootstrap in 30s
+[2026/03/03 14:34:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:34:44] retrying bootstrap in 30s
+[2026/03/03 14:35:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:35:14] retrying bootstrap in 30s
+[2026/03/03 14:35:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:35:44] retrying bootstrap in 30s
+[2026/03/03 14:36:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:36:14] retrying bootstrap in 30s
+[2026/03/03 14:36:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:36:44] retrying bootstrap in 30s
+[2026/03/03 14:37:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:37:14] retrying bootstrap in 30s
+[2026/03/03 14:37:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:37:44] retrying bootstrap in 30s
+[2026/03/03 14:38:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:38:14] retrying bootstrap in 30s
+[2026/03/03 14:38:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:38:44] retrying bootstrap in 30s
+[2026/03/03 14:39:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:39:14] retrying bootstrap in 30s
+[2026/03/03 14:39:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:39:44] retrying bootstrap in 30s
+[2026/03/03 14:40:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:40:14] retrying bootstrap in 30s
+[2026/03/03 14:40:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:40:44] retrying bootstrap in 30s
+[2026/03/03 14:41:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:41:14] retrying bootstrap in 30s
+[2026/03/03 14:41:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:41:44] retrying bootstrap in 30s
+[2026/03/03 14:42:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:42:14] retrying bootstrap in 30s
+[2026/03/03 14:42:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:42:44] retrying bootstrap in 30s
+[2026/03/03 14:43:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:43:14] retrying bootstrap in 30s
+[2026/03/03 14:43:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:43:44] retrying bootstrap in 30s
+[2026/03/03 14:44:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:44:14] retrying bootstrap in 30s
+[2026/03/03 14:44:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:44:44] retrying bootstrap in 30s
+[2026/03/03 14:45:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:45:14] retrying bootstrap in 30s
+[2026/03/03 14:45:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:45:44] retrying bootstrap in 30s
+[2026/03/03 14:46:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:46:14] retrying bootstrap in 30s
+[2026/03/03 14:46:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:46:44] retrying bootstrap in 30s
+[2026/03/03 14:47:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:47:14] retrying bootstrap in 30s
+[2026/03/03 14:47:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:47:44] retrying bootstrap in 30s
+[2026/03/03 14:48:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:48:14] retrying bootstrap in 30s
+[2026/03/03 14:48:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:48:44] retrying bootstrap in 30s
+[2026/03/03 14:49:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:49:14] retrying bootstrap in 30s
+[2026/03/03 14:49:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:49:44] retrying bootstrap in 30s
+[2026/03/03 14:50:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:50:14] retrying bootstrap in 30s
+[2026/03/03 14:50:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:50:44] retrying bootstrap in 30s
+[2026/03/03 14:51:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:51:14] retrying bootstrap in 30s
+[2026/03/03 14:51:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:51:44] retrying bootstrap in 30s
+[2026/03/03 14:52:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:52:14] retrying bootstrap in 30s
+[2026/03/03 14:52:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:52:44] retrying bootstrap in 30s
+[2026/03/03 14:53:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:53:14] retrying bootstrap in 30s
+[2026/03/03 14:53:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:53:44] retrying bootstrap in 30s
+[2026/03/03 14:54:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:54:14] retrying bootstrap in 30s
+[2026/03/03 14:54:44] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:54:44] retrying bootstrap in 30s
+[2026/03/03 14:55:14] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:55:14] retrying bootstrap in 30s
+[2026/03/03 14:55:20] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:55:20] retrying bootstrap in 1s
+[2026/03/03 14:55:21] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:55:21] retrying bootstrap in 2s
+[2026/03/03 14:55:23] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:55:23] retrying bootstrap in 4s
+[2026/03/03 14:55:27] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:55:27] retrying bootstrap in 8s
+[2026/03/03 14:55:35] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:55:35] retrying bootstrap in 16s
+[2026/03/03 14:55:51] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:55:51] retrying bootstrap in 30s
+[2026/03/03 14:56:21] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:56:21] retrying bootstrap in 30s
+[2026/03/03 14:56:51] connecting to web server: http://192.168.100.135:8000 [failed] (Post "http://192.168.100.135:8000/proxy/agent/bootstrap": dial tcp 192.168.100.135:8000: connect: connection refused)
+[2026/03/03 14:56:51] retrying bootstrap in 30s
+[2026/03/03 14:57:22] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:57:22] retrying bootstrap in 1s
+[2026/03/03 14:57:23] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:57:23] retrying bootstrap in 2s
+[2026/03/03 14:57:25] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:57:25] retrying bootstrap in 4s
+[2026/03/03 14:57:29] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:57:29] retrying bootstrap in 8s
+[2026/03/03 14:57:51] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:57:51] retrying bootstrap in 1s
+[2026/03/03 14:57:52] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:57:52] retrying bootstrap in 2s
+[2026/03/03 14:57:54] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:57:54] retrying bootstrap in 4s
+[2026/03/03 14:57:58] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:57:58] retrying bootstrap in 8s
+[2026/03/03 14:58:07] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:58:07] retrying bootstrap in 16s
+[2026/03/03 14:58:27] connecting to web server: http://localhots:8001 [failed] (Post "http://localhots:8001/proxy/agent/bootstrap": dial tcp: lookup localhots: no such host)
+[2026/03/03 14:58:27] retrying bootstrap in 1s
+[2026/03/03 14:58:28] connecting to web server: http://localhots:8001 [failed] (Post "http://localhots:8001/proxy/agent/bootstrap": dial tcp: lookup localhots: no such host)
+[2026/03/03 14:58:28] retrying bootstrap in 2s
+[2026/03/03 14:58:30] connecting to web server: http://localhots:8001 [failed] (Post "http://localhots:8001/proxy/agent/bootstrap": dial tcp: lookup localhots: no such host)
+[2026/03/03 14:58:30] retrying bootstrap in 4s
+[2026/03/03 14:58:39] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:58:39] retrying bootstrap in 1s
+[2026/03/03 14:58:40] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:58:40] retrying bootstrap in 2s
+[2026/03/03 14:58:42] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:58:42] retrying bootstrap in 4s
+[2026/03/03 14:58:47] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:58:47] retrying bootstrap in 8s
+[2026/03/03 14:58:55] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:58:55] retrying bootstrap in 16s
+[2026/03/03 14:59:11] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:59:11] retrying bootstrap in 30s
+[2026/03/03 14:59:41] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 14:59:41] retrying bootstrap in 30s
+[2026/03/03 15:00:11] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:00:11] retrying bootstrap in 30s
+[2026/03/03 15:00:41] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:00:41] retrying bootstrap in 30s
+[2026/03/03 15:01:11] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:01:11] retrying bootstrap in 30s
+[2026/03/03 15:01:41] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:01:41] retrying bootstrap in 30s
+[2026/03/03 15:02:11] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:02:11] retrying bootstrap in 30s
+[2026/03/03 15:02:41] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:02:41] retrying bootstrap in 30s
+[2026/03/03 15:03:11] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:03:11] retrying bootstrap in 30s
+[2026/03/03 15:03:41] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:03:41] retrying bootstrap in 30s
+[2026/03/03 15:04:12] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:04:12] retrying bootstrap in 30s
+[2026/03/03 15:04:42] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:04:42] retrying bootstrap in 30s
+[2026/03/03 15:05:12] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:05:12] retrying bootstrap in 30s
+[2026/03/03 15:05:42] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:05:42] retrying bootstrap in 30s
+[2026/03/03 15:06:12] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:06:12] retrying bootstrap in 30s
+[2026/03/03 15:06:42] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:06:42] retrying bootstrap in 30s
+[2026/03/03 15:07:12] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:07:12] retrying bootstrap in 30s
+[2026/03/03 15:07:42] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:07:42] retrying bootstrap in 30s
+[2026/03/03 15:08:12] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:08:12] retrying bootstrap in 30s
+[2026/03/03 15:08:42] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:08:42] retrying bootstrap in 30s
+[2026/03/03 15:09:12] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:09:12] retrying bootstrap in 30s
+[2026/03/03 15:09:42] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:09:42] retrying bootstrap in 30s
+[2026/03/03 15:10:12] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:10:12] retrying bootstrap in 30s
+[2026/03/03 15:10:43] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:10:43] retrying bootstrap in 30s
+[2026/03/03 15:11:13] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:11:13] retrying bootstrap in 30s
+[2026/03/03 15:11:43] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:11:43] retrying bootstrap in 30s
+[2026/03/03 15:12:13] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:12:13] retrying bootstrap in 30s
+[2026/03/03 15:12:43] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:12:43] retrying bootstrap in 30s
+[2026/03/03 15:13:13] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:13:13] retrying bootstrap in 30s
+[2026/03/03 15:13:43] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:13:43] retrying bootstrap in 30s
+[2026/03/03 15:14:13] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:14:13] retrying bootstrap in 30s
+[2026/03/03 15:14:43] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:14:43] retrying bootstrap in 30s
+[2026/03/03 15:15:13] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:15:13] retrying bootstrap in 30s
+[2026/03/03 15:15:44] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:15:44] retrying bootstrap in 30s
+[2026/03/03 15:16:14] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:16:14] retrying bootstrap in 30s
+[2026/03/03 15:16:44] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:16:44] retrying bootstrap in 30s
+[2026/03/03 15:17:14] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:17:14] retrying bootstrap in 30s
+[2026/03/03 15:17:44] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:17:44] retrying bootstrap in 30s
+[2026/03/03 15:18:14] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:18:14] retrying bootstrap in 30s
+[2026/03/03 15:18:44] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:18:44] retrying bootstrap in 30s
+[2026/03/03 15:19:15] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:19:15] retrying bootstrap in 30s
+[2026/03/03 15:19:45] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:19:45] retrying bootstrap in 30s
+[2026/03/03 15:20:15] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:20:15] retrying bootstrap in 30s
+[2026/03/03 15:20:45] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:20:45] retrying bootstrap in 30s
+[2026/03/03 15:21:15] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:21:15] retrying bootstrap in 30s
+[2026/03/03 15:21:45] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:21:45] retrying bootstrap in 30s
+[2026/03/03 15:22:15] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:22:15] retrying bootstrap in 30s
+[2026/03/03 15:22:46] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:22:46] retrying bootstrap in 30s
+[2026/03/03 15:23:16] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:23:16] retrying bootstrap in 30s
+[2026/03/03 15:23:46] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:23:46] retrying bootstrap in 30s
+[2026/03/03 15:24:16] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:24:16] retrying bootstrap in 30s
+[2026/03/03 15:24:46] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:24:46] retrying bootstrap in 30s
+[2026/03/03 15:25:16] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:25:16] retrying bootstrap in 30s
+[2026/03/03 15:25:46] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:25:46] retrying bootstrap in 30s
+[2026/03/03 15:26:16] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:26:16] retrying bootstrap in 30s
+[2026/03/03 15:26:47] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:26:47] retrying bootstrap in 30s
+[2026/03/03 15:27:17] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:27:17] retrying bootstrap in 30s
+[2026/03/03 15:27:47] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:27:47] retrying bootstrap in 30s
+[2026/03/03 15:28:17] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:28:17] retrying bootstrap in 30s
+[2026/03/03 15:28:47] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:28:47] retrying bootstrap in 30s
+[2026/03/03 15:29:17] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:29:17] retrying bootstrap in 30s
+[2026/03/03 15:29:47] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:29:47] retrying bootstrap in 30s
+[2026/03/03 15:30:18] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:30:18] retrying bootstrap in 30s
+[2026/03/03 15:30:48] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:30:48] retrying bootstrap in 30s
+[2026/03/03 15:31:18] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:31:18] retrying bootstrap in 30s
+[2026/03/03 15:31:48] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:31:48] retrying bootstrap in 30s
+[2026/03/03 15:32:18] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:32:18] retrying bootstrap in 30s
+[2026/03/03 15:32:48] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:32:48] retrying bootstrap in 30s
+[2026/03/03 15:33:19] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:33:19] retrying bootstrap in 30s
+[2026/03/03 15:33:49] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:33:49] retrying bootstrap in 30s
+[2026/03/03 15:34:19] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:34:19] retrying bootstrap in 30s
+[2026/03/03 15:34:49] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:34:49] retrying bootstrap in 30s
+[2026/03/03 15:35:19] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:35:19] retrying bootstrap in 30s
+[2026/03/03 15:35:49] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:35:49] retrying bootstrap in 30s
+[2026/03/03 15:36:19] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:36:19] retrying bootstrap in 30s
+[2026/03/03 15:36:50] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:36:50] retrying bootstrap in 30s
+[2026/03/03 15:37:20] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:37:20] retrying bootstrap in 30s
+[2026/03/03 15:37:50] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:37:50] retrying bootstrap in 30s
+[2026/03/03 15:38:20] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:38:20] retrying bootstrap in 30s
+[2026/03/03 15:38:50] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:38:50] retrying bootstrap in 30s
+[2026/03/03 15:39:20] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:39:20] retrying bootstrap in 30s
+[2026/03/03 15:39:50] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:39:50] retrying bootstrap in 30s
+[2026/03/03 15:40:20] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:40:20] retrying bootstrap in 30s
+[2026/03/03 15:40:51] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:40:51] retrying bootstrap in 30s
+[2026/03/03 15:41:21] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:41:21] retrying bootstrap in 30s
+[2026/03/03 15:41:51] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:41:51] retrying bootstrap in 30s
+[2026/03/03 15:42:21] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:42:21] retrying bootstrap in 30s
+[2026/03/03 15:42:51] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:42:51] retrying bootstrap in 30s
+[2026/03/03 15:43:21] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:43:21] retrying bootstrap in 30s
+[2026/03/03 15:43:51] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:43:51] retrying bootstrap in 30s
+[2026/03/03 15:44:22] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:44:22] retrying bootstrap in 30s
+[2026/03/03 15:44:52] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:44:52] retrying bootstrap in 30s
+[2026/03/03 15:45:22] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:45:22] retrying bootstrap in 30s
+[2026/03/03 15:45:52] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:45:52] retrying bootstrap in 30s
+[2026/03/03 15:46:22] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:46:22] retrying bootstrap in 30s
+[2026/03/03 15:46:52] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:46:52] retrying bootstrap in 30s
+[2026/03/03 15:47:22] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:47:22] retrying bootstrap in 30s
+[2026/03/03 15:47:53] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:47:53] retrying bootstrap in 30s
+[2026/03/03 15:48:23] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:48:23] retrying bootstrap in 30s
+[2026/03/03 15:48:53] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:48:53] retrying bootstrap in 30s
+[2026/03/03 15:49:23] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:49:23] retrying bootstrap in 30s
+[2026/03/03 15:49:53] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:49:53] retrying bootstrap in 30s
+[2026/03/03 15:50:23] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:50:23] retrying bootstrap in 30s
+[2026/03/03 15:50:53] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:50:53] retrying bootstrap in 30s
+[2026/03/03 15:51:23] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:51:23] retrying bootstrap in 30s
+[2026/03/03 15:51:54] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:51:54] retrying bootstrap in 30s
+[2026/03/03 15:52:24] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:52:24] retrying bootstrap in 30s
+[2026/03/03 15:52:54] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:52:54] retrying bootstrap in 30s
+[2026/03/03 15:53:24] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:53:24] retrying bootstrap in 30s
+[2026/03/03 15:53:54] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:53:54] retrying bootstrap in 30s
+[2026/03/03 15:54:24] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:54:24] retrying bootstrap in 30s
+[2026/03/03 15:54:54] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:54:54] retrying bootstrap in 30s
+[2026/03/03 15:55:25] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:55:25] retrying bootstrap in 30s
+[2026/03/03 15:55:55] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:55:55] retrying bootstrap in 30s
+[2026/03/03 15:56:25] connecting to web server: http://192.168.100.135:8001 [failed] (Post "http://192.168.100.135:8001/proxy/agent/bootstrap": dial tcp 192.168.100.135:8001: connect: connection refused)
+[2026/03/03 15:56:25] retrying bootstrap in 30s
+[2026/03/03 15:56:55] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:56:55] retrying bootstrap in 30s
+[2026/03/03 15:57:25] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:57:25] retrying bootstrap in 30s
+[2026/03/03 15:58:54] connecting to web server: hhtp://192.168.100.135:8001 [failed] (Post "hhtp://192.168.100.135:8001/proxy/agent/bootstrap": unsupported protocol scheme "hhtp")
+[2026/03/03 15:58:54] retrying bootstrap in 1s
+[2026/03/03 15:58:55] connecting to web server: hhtp://192.168.100.135:8001 [failed] (Post "hhtp://192.168.100.135:8001/proxy/agent/bootstrap": unsupported protocol scheme "hhtp")
+[2026/03/03 15:58:55] retrying bootstrap in 2s
+[2026/03/03 15:58:57] connecting to web server: hhtp://192.168.100.135:8001 [failed] (Post "hhtp://192.168.100.135:8001/proxy/agent/bootstrap": unsupported protocol scheme "hhtp")
+[2026/03/03 15:58:57] retrying bootstrap in 4s
+[2026/03/03 15:59:01] connecting to web server: hhtp://192.168.100.135:8001 [failed] (Post "hhtp://192.168.100.135:8001/proxy/agent/bootstrap": unsupported protocol scheme "hhtp")
+[2026/03/03 15:59:01] retrying bootstrap in 8s
+[2026/03/03 15:59:09] connecting to web server: hhtp://192.168.100.135:8001 [failed] (Post "hhtp://192.168.100.135:8001/proxy/agent/bootstrap": unsupported protocol scheme "hhtp")
+[2026/03/03 15:59:09] retrying bootstrap in 16s
+[2026/03/03 15:59:34] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:59:34] retrying bootstrap in 1s
+[2026/03/03 15:59:35] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:59:35] retrying bootstrap in 2s
+[2026/03/03 15:59:37] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:59:37] retrying bootstrap in 4s
+[2026/03/03 15:59:41] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:59:41] retrying bootstrap in 8s
+[2026/03/03 15:59:49] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 15:59:49] retrying bootstrap in 16s
+[2026/03/03 16:00:05] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 16:00:05] retrying bootstrap in 30s
+[2026/03/03 16:00:35] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 16:00:35] retrying bootstrap in 30s
+[2026/03/03 16:01:06] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 16:01:06] retrying bootstrap in 30s
+[2026/03/03 16:01:36] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 16:01:36] retrying bootstrap in 30s
+[2026/03/03 16:02:06] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 16:02:06] retrying bootstrap in 30s
+[2026/03/03 16:02:36] connecting to web server: http://192.168.100.135:8001 [failed] (bootstrap http status 500)
+[2026/03/03 16:02:36] retrying bootstrap in 30s
+[2026/03/03 16:03:06] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:03:11] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:03:11] retrying gateway connect in 1s
+[2026/03/03 16:03:12] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:03:17] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:03:17] retrying gateway connect in 1s
+[2026/03/03 16:03:18] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:03:23] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:03:23] retrying gateway connect in 1s
+[2026/03/03 16:03:24] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:03:29] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:03:29] retrying gateway connect in 1s
+[2026/03/03 16:03:30] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:03:35] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:03:35] retrying gateway connect in 1s
+[2026/03/03 16:03:36] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:03:41] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:03:41] retrying gateway connect in 1s
+[2026/03/03 16:03:42] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:03:47] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:03:47] retrying gateway connect in 1s
+[2026/03/03 16:03:49] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:03:54] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:03:54] retrying gateway connect in 1s
+[2026/03/03 16:03:55] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:04:00] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:04:00] retrying gateway connect in 1s
+[2026/03/03 16:04:01] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:04:06] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:04:06] retrying gateway connect in 1s
+[2026/03/03 16:04:07] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:04:12] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:04:12] retrying gateway connect in 1s
+[2026/03/03 16:04:13] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:04:18] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:04:18] retrying gateway connect in 1s
+[2026/03/03 16:04:19] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:04:24] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:04:24] retrying gateway connect in 1s
+[2026/03/03 16:04:25] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:04:30] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:04:30] retrying gateway connect in 1s
+[2026/03/03 16:04:31] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:04:36] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:04:36] retrying gateway connect in 1s
+[2026/03/03 16:04:39] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:04:44] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:04:44] retrying gateway connect in 1s
+[2026/03/03 16:04:45] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:04:50] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:04:50] retrying gateway connect in 1s
+[2026/03/03 16:04:51] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:04:56] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:04:56] retrying gateway connect in 1s
+[2026/03/03 16:04:57] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:05:02] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:05:02] retrying gateway connect in 1s
+[2026/03/03 16:05:03] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:05:08] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:05:08] retrying gateway connect in 1s
+[2026/03/03 16:05:09] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:05:14] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:05:14] retrying gateway connect in 1s
+[2026/03/03 16:05:15] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:05:20] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:05:20] retrying gateway connect in 1s
+[2026/03/03 16:05:21] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:05:26] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:05:26] retrying gateway connect in 1s
+[2026/03/03 16:05:27] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:05:32] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:05:32] retrying gateway connect in 1s
+[2026/03/03 16:05:33] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:05:38] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:05:38] retrying gateway connect in 1s
+[2026/03/03 16:05:40] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:05:45] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:05:45] retrying gateway connect in 1s
+[2026/03/03 16:05:46] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:05:51] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:05:51] retrying gateway connect in 1s
+[2026/03/03 16:05:52] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:05:57] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:05:57] retrying gateway connect in 1s
+[2026/03/03 16:05:58] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:06:03] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:06:03] retrying gateway connect in 1s
+[2026/03/03 16:06:04] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:06:09] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:06:09] retrying gateway connect in 1s
+[2026/03/03 16:06:10] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:06:15] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:06:15] retrying gateway connect in 1s
+[2026/03/03 16:06:16] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:06:21] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:06:21] retrying gateway connect in 1s
+[2026/03/03 16:06:22] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:06:27] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:06:27] retrying gateway connect in 1s
+[2026/03/03 16:06:28] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:06:33] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:06:33] retrying gateway connect in 1s
+[2026/03/03 16:06:34] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:06:39] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:06:39] retrying gateway connect in 1s
+[2026/03/03 16:06:40] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:06:45] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:06:45] retrying gateway connect in 1s
+[2026/03/03 16:06:47] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:06:52] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:06:52] retrying gateway connect in 1s
+[2026/03/03 16:06:53] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:06:58] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:06:58] retrying gateway connect in 1s
+[2026/03/03 16:06:59] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:07:04] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:07:04] retrying gateway connect in 1s
+[2026/03/03 16:07:05] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:07:10] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:07:10] retrying gateway connect in 1s
+[2026/03/03 16:07:11] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:07:16] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:07:16] retrying gateway connect in 1s
+[2026/03/03 16:07:17] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:07:22] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:07:22] retrying gateway connect in 1s
+[2026/03/03 16:07:23] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:07:28] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:07:28] retrying gateway connect in 1s
+[2026/03/03 16:07:29] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:07:34] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:07:34] retrying gateway connect in 1s
+[2026/03/03 16:07:35] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:07:40] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:07:40] retrying gateway connect in 1s
+[2026/03/03 16:07:41] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:07:46] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:07:46] retrying gateway connect in 1s
+[2026/03/03 16:07:47] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:07:52] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:07:52] retrying gateway connect in 1s
+[2026/03/03 16:07:53] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:07:58] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:07:58] retrying gateway connect in 1s
+[2026/03/03 16:08:00] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:08:05] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:08:05] retrying gateway connect in 1s
+[2026/03/03 16:08:06] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:08:11] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:08:11] retrying gateway connect in 1s
+[2026/03/03 16:08:12] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:08:17] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:08:17] retrying gateway connect in 1s
+[2026/03/03 16:08:18] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:08:23] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:08:23] retrying gateway connect in 1s
+[2026/03/03 16:08:24] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:08:29] connecting to gateway server: 192.168.100.135:9090 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:08:29] retrying gateway connect in 1s
+[2026/03/03 16:08:30] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:08:35] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:08:35] retrying gateway connect in 1s
+[2026/03/03 16:08:36] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:08:41] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:08:41] retrying gateway connect in 1s
+[2026/03/03 16:08:42] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:08:47] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:08:47] retrying gateway connect in 1s
+[2026/03/03 16:08:48] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:08:53] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:08:53] retrying gateway connect in 1s
+[2026/03/03 16:08:54] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:08:59] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:08:59] retrying gateway connect in 1s
+[2026/03/03 16:09:00] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:09:05] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:09:05] retrying gateway connect in 1s
+[2026/03/03 16:09:07] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:09:12] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:09:12] retrying gateway connect in 1s
+[2026/03/03 16:09:13] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:09:18] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:09:18] retrying gateway connect in 1s
+[2026/03/03 16:09:19] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:09:24] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:09:24] retrying gateway connect in 1s
+[2026/03/03 16:09:25] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:09:30] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:09:30] retrying gateway connect in 1s
+[2026/03/03 16:09:31] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:09:36] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:09:36] retrying gateway connect in 1s
+[2026/03/03 16:09:37] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:09:42] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:09:42] retrying gateway connect in 1s
+[2026/03/03 16:09:43] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:09:48] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:09:48] retrying gateway connect in 1s
+[2026/03/03 16:09:49] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:09:54] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:09:54] retrying gateway connect in 1s
+[2026/03/03 16:09:55] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:00] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:10:00] retrying gateway connect in 1s
+[2026/03/03 16:10:01] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:06] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:10:06] retrying gateway connect in 1s
+[2026/03/03 16:10:07] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:12] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:10:12] retrying gateway connect in 1s
+[2026/03/03 16:10:13] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:18] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:10:18] retrying gateway connect in 1s
+[2026/03/03 16:10:19] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:24] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/03 16:10:24] retrying gateway connect in 1s
+[2026/03/03 16:10:26] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:26] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:26] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:26] retrying gateway connect in 1s
+[2026/03/03 16:10:27] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:27] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:27] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:27] retrying gateway connect in 1s
+[2026/03/03 16:10:28] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:28] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:28] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:28] retrying gateway connect in 1s
+[2026/03/03 16:10:29] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:29] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:29] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:29] retrying gateway connect in 1s
+[2026/03/03 16:10:30] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:30] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:30] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:30] retrying gateway connect in 1s
+[2026/03/03 16:10:32] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:32] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:32] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:32] retrying gateway connect in 1s
+[2026/03/03 16:10:33] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:33] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:33] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:33] retrying gateway connect in 1s
+[2026/03/03 16:10:34] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:34] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:34] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:34] retrying gateway connect in 1s
+[2026/03/03 16:10:35] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:35] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:35] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:35] retrying gateway connect in 1s
+[2026/03/03 16:10:36] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:36] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:36] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:36] retrying gateway connect in 1s
+[2026/03/03 16:10:37] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:37] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:37] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:37] retrying gateway connect in 1s
+[2026/03/03 16:10:38] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:38] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:38] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:38] retrying gateway connect in 1s
+[2026/03/03 16:10:39] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:39] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:39] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:39] retrying gateway connect in 1s
+[2026/03/03 16:10:40] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:40] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:40] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:40] retrying gateway connect in 1s
+[2026/03/03 16:10:41] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:41] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:41] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:41] retrying gateway connect in 1s
+[2026/03/03 16:10:42] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:42] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:42] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:42] retrying gateway connect in 1s
+[2026/03/03 16:10:43] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:43] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:43] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:43] retrying gateway connect in 1s
+[2026/03/03 16:10:44] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:44] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:44] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:44] retrying gateway connect in 1s
+[2026/03/03 16:10:46] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:46] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:46] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:46] retrying gateway connect in 1s
+[2026/03/03 16:10:47] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:47] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:47] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:47] retrying gateway connect in 1s
+[2026/03/03 16:10:48] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:48] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:48] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:48] retrying gateway connect in 1s
+[2026/03/03 16:10:49] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:49] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:49] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:49] retrying gateway connect in 1s
+[2026/03/03 16:10:50] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:50] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:50] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/03 16:10:50] retrying gateway connect in 1s
+[2026/03/03 16:10:51] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:10:51] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:10:51] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 16:10:51] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 16:13:00] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:13:00] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:13:00] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 16:13:00] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 16:14:20] heartbeat ack timeout: no ack in 45s
+[2026/03/03 16:14:20] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 16:14:20] retrying gateway connect in 1s
+[2026/03/03 16:14:21] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:14:21] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:14:21] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 16:14:21] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 16:21:44] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 16:21:44] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 16:21:44] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 16:21:44] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 18:04:13] Client request - Source: 192.168.100.135:64356, Target: api.ipify.org
+[2026/03/03 18:04:13] Successfully connected to target server: 198.18.32.138:443 task_id=task-1772532253469539000 conn=conn-a80a594c57a3c99a
+[2026/03/03 18:04:15] target read closed: task_id=task-1772532253469539000 error=read tcp 192.168.100.135:64357->198.18.32.138:443: use of closed network connection
+[2026/03/03 18:04:15] proxy_finished gw=gateway-0007 duration_time=2316ms src=192.168.100.135:64356 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.32.138:443 proto=socks5 CONNECT route=- egress=192.168.100.135:64357 bytes_in=810B bytes_out=3618B conn=conn-a80a594c57a3c99a status=499 reason=client_closed result=success
+[2026/03/03 18:04:45] Client request - Source: 192.168.100.135:64540, Target: api.ipify.org
+[2026/03/03 18:04:45] Successfully connected to target server: 198.18.32.138:443 task_id=task-1772532285399262000 conn=conn-651642c4c0de9b78
+[2026/03/03 18:04:47] target read closed: task_id=task-1772532285399262000 error=read tcp 192.168.100.135:64541->198.18.32.138:443: use of closed network connection
+[2026/03/03 18:04:47] proxy_finished gw=gateway-0007 duration_time=2344ms src=192.168.100.135:64540 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.32.138:443 proto=socks5 CONNECT route=- egress=192.168.100.135:64541 bytes_in=810B bytes_out=3618B conn=conn-651642c4c0de9b78 status=499 reason=client_closed result=success
+[2026/03/03 18:05:20] Client request - Source: 192.168.100.135:64693, Target: api.ipify.org
+[2026/03/03 18:05:20] Successfully connected to target server: 198.18.32.138:443 task_id=task-1772532320162401000 conn=conn-17a9a022db92e175
+[2026/03/03 18:05:22] target read closed: task_id=task-1772532320162401000 error=read tcp 192.168.100.135:64694->198.18.32.138:443: use of closed network connection
+[2026/03/03 18:05:22] proxy_finished gw=gateway-0007 duration_time=2323ms src=192.168.100.135:64693 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.32.138:443 proto=socks5 CONNECT route=- egress=192.168.100.135:64694 bytes_in=810B bytes_out=3621B conn=conn-17a9a022db92e175 status=499 reason=client_closed result=success
+[2026/03/03 18:06:02] Client request - Source: 192.168.100.135:64826, Target: api.ipify.org
+[2026/03/03 18:06:02] Successfully connected to target server: 198.18.32.138:443 task_id=task-1772532362770937000 conn=conn-05709db388801d04
+[2026/03/03 18:06:05] target read closed: task_id=task-1772532362770937000 error=read tcp 192.168.100.135:64827->198.18.32.138:443: use of closed network connection
+[2026/03/03 18:06:05] proxy_finished gw=gateway-0007 duration_time=2314ms src=192.168.100.135:64826 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.32.138:443 proto=socks5 CONNECT route=- egress=192.168.100.135:64827 bytes_in=810B bytes_out=3597B conn=conn-05709db388801d04 status=499 reason=client_closed result=success
+[2026/03/03 18:07:03] Client request - Source: 192.168.100.135:65088, Target: api.ipify.org
+[2026/03/03 18:07:03] Successfully connected to target server: 198.18.32.138:443 task_id=task-1772532423142511000 conn=conn-6923068dc38aa65b
+[2026/03/03 18:07:05] target read closed: task_id=task-1772532423142511000 error=read tcp 192.168.100.135:65089->198.18.32.138:443: use of closed network connection
+[2026/03/03 18:07:05] proxy_finished gw=gateway-0007 duration_time=2323ms src=192.168.100.135:65088 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.32.138:443 proto=socks5 CONNECT route=- egress=192.168.100.135:65089 bytes_in=810B bytes_out=3618B conn=conn-6923068dc38aa65b status=499 reason=client_closed result=success
+[2026/03/03 18:07:27] Client request - Source: 192.168.100.135:65205, Target: api.ipify.org
+[2026/03/03 18:07:27] Successfully connected to target server: 198.18.32.138:443 task_id=task-1772532447367999000 conn=conn-5d42a10a609c3af6
+[2026/03/03 18:07:29] target read closed: task_id=task-1772532447367999000 error=read tcp 192.168.100.135:65206->198.18.32.138:443: use of closed network connection
+[2026/03/03 18:07:29] proxy_finished gw=gateway-0007 duration_time=2315ms src=192.168.100.135:65205 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.32.138:443 proto=socks5 CONNECT route=- egress=192.168.100.135:65206 bytes_in=810B bytes_out=3619B conn=conn-5d42a10a609c3af6 status=499 reason=client_closed result=success
+[2026/03/03 18:07:54] Client request - Source: 192.168.100.135:65498, Target: api.ipify.org
+[2026/03/03 18:07:54] Successfully connected to target server: 198.18.32.138:443 task_id=task-1772532474854365000 conn=conn-b565ccae9a2bfe05
+[2026/03/03 18:07:57] target read closed: task_id=task-1772532474854365000 error=read tcp 192.168.100.135:65499->198.18.32.138:443: use of closed network connection
+[2026/03/03 18:07:57] proxy_finished gw=gateway-0007 duration_time=2313ms src=192.168.100.135:65498 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.32.138:443 proto=socks5 CONNECT route=- egress=192.168.100.135:65499 bytes_in=810B bytes_out=3598B conn=conn-b565ccae9a2bfe05 status=499 reason=client_closed result=success
+[2026/03/03 18:08:39] Client request - Source: 192.168.100.135:49505, Target: api.ipify.org
+[2026/03/03 18:08:39] Successfully connected to target server: 198.18.32.138:443 task_id=task-1772532519279192000 conn=conn-6d85413b29d18a5b
+[2026/03/03 18:08:41] target read closed: task_id=task-1772532519279192000 error=read tcp 192.168.100.135:49506->198.18.32.138:443: use of closed network connection
+[2026/03/03 18:08:41] proxy_finished gw=gateway-0007 duration_time=2310ms src=192.168.100.135:49505 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.32.138:443 proto=socks5 CONNECT route=- egress=192.168.100.135:49506 bytes_in=810B bytes_out=3620B conn=conn-6d85413b29d18a5b status=499 reason=client_closed result=success
+[2026/03/03 19:00:55] heartbeat ack timeout: no ack in 45s
+[2026/03/03 19:00:55] connecting to gateway server: 192.168.100.135:10443 [failed] (INTERNAL_ERROR (local): write udp [::]:57393->192.168.100.135:10443: sendmsg: network is unreachable)
+[2026/03/03 19:00:55] retrying gateway connect in 1s
+[2026/03/03 19:00:56] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 19:00:56] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 19:00:56] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 19:00:56] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 19:17:16] heartbeat ack timeout: no ack in 45s
+[2026/03/03 19:17:16] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 19:17:16] retrying gateway connect in 1s
+[2026/03/03 19:17:17] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 19:17:17] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 19:17:17] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 19:17:17] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 19:33:02] heartbeat ack timeout: no ack in 45s
+[2026/03/03 19:33:02] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 19:33:02] retrying gateway connect in 1s
+[2026/03/03 19:33:03] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 19:33:03] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 19:33:03] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 19:33:03] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 19:49:10] heartbeat ack timeout: no ack in 45s
+[2026/03/03 19:49:10] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 19:49:10] retrying gateway connect in 1s
+[2026/03/03 19:49:11] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 19:49:11] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 19:49:11] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 19:49:11] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 20:06:11] heartbeat ack timeout: no ack in 45s
+[2026/03/03 20:06:11] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 20:06:11] retrying gateway connect in 1s
+[2026/03/03 20:06:12] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 20:06:12] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 20:06:12] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 20:06:12] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 20:23:03] heartbeat ack timeout: no ack in 45s
+[2026/03/03 20:23:03] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 20:23:03] retrying gateway connect in 1s
+[2026/03/03 20:23:04] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 20:23:04] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 20:23:04] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 20:23:04] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 21:40:22] heartbeat ack timeout: no ack in 45s
+[2026/03/03 21:40:22] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 21:40:22] retrying gateway connect in 1s
+[2026/03/03 21:40:23] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 21:40:23] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 21:40:23] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 21:40:23] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 21:44:08] heartbeat ack timeout: no ack in 45s
+[2026/03/03 21:44:08] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 21:44:08] retrying gateway connect in 1s
+[2026/03/03 21:44:09] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 21:44:09] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 21:44:09] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 21:44:09] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 21:59:54] heartbeat ack timeout: no ack in 45s
+[2026/03/03 21:59:54] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 21:59:54] retrying gateway connect in 1s
+[2026/03/03 21:59:55] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 21:59:55] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 21:59:55] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 21:59:55] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 22:16:04] heartbeat ack timeout: no ack in 45s
+[2026/03/03 22:16:04] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 22:16:04] retrying gateway connect in 1s
+[2026/03/03 22:16:05] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 22:16:05] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 22:16:05] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 22:16:05] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 22:33:44] heartbeat ack timeout: no ack in 45s
+[2026/03/03 22:33:44] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 22:33:44] retrying gateway connect in 1s
+[2026/03/03 22:33:46] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 22:33:46] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 22:33:46] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 22:33:46] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 22:45:09] heartbeat ack timeout: no ack in 45s
+[2026/03/03 22:45:09] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 22:45:09] retrying gateway connect in 1s
+[2026/03/03 22:45:10] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 22:45:10] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 22:45:10] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 22:45:10] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 23:04:46] heartbeat ack timeout: no ack in 45s
+[2026/03/03 23:04:46] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 23:04:46] retrying gateway connect in 1s
+[2026/03/03 23:04:47] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 23:04:47] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 23:04:47] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 23:04:47] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 23:20:35] heartbeat ack timeout: no ack in 45s
+[2026/03/03 23:20:35] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 23:20:35] retrying gateway connect in 1s
+[2026/03/03 23:20:37] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 23:20:37] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 23:20:37] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 23:20:37] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 23:39:19] heartbeat ack timeout: no ack in 45s
+[2026/03/03 23:39:19] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 23:39:19] retrying gateway connect in 1s
+[2026/03/03 23:39:20] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 23:39:20] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 23:39:20] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 23:39:20] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 23:46:13] heartbeat ack timeout: no ack in 45s
+[2026/03/03 23:46:13] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/03 23:46:13] retrying gateway connect in 1s
+[2026/03/03 23:46:14] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/03 23:46:14] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/03 23:46:14] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/03 23:46:14] snapshot received: version=20260302040240 updated_at_unix=1772424160

@@ -1,0 +1,30 @@
+[2026-03-03T16:10:00+08:00] [INFO] Starting Gateway... module=main
+[2026-03-03T16:10:00+08:00] [INFO] Configuration loaded successfully module=main
+[2026-03-03T16:10:00+08:00] [INFO] Redis connection established module=main
+[GIN-debug] [WARNING] Running in "debug" mode. Switch to "release" mode in production.
+ - using env:	export GIN_MODE=release
+ - using code:	gin.SetMode(gin.ReleaseMode)
+
+[GIN-debug] GET    /status                   --> socks-proxy-gateway/internal/api.(*Server).getStatus-fm (3 handlers)
+[GIN-debug] GET    /gateways                 --> socks-proxy-gateway/internal/api.(*Server).listGateways-fm (4 handlers)
+[GIN-debug] GET    /gateways/:id/agents      --> socks-proxy-gateway/internal/api.(*Server).listGatewayAgents-fm (4 handlers)
+[2026-03-03T16:10:00+08:00] [INFO] Services initialized module=main
+
+====================================================================
+                     SOCKS Proxy Gateway STARTED                    
+====================================================================
+
+Mode: RUN      | Gateway: gateway-0007
+Region: hk     | Zone: ap-east-1
+Entry: [18001]      | API: 10080
+QUIC: 10443       | SOCKS: [13010]
+Redis: 127.0.0.1:6379  | Max Agents: 200
+Heartbeat: 10s | TTL: 30s
+
+====================================================================
+[2026-03-03T16:10:00+08:00] [INFO] Web syncer started module=main
+[2026-03-03T16:10:00+08:00] [INFO] QUIC server started module=main host=0.0.0.0 port=10443
+[2026-03-03T16:10:00+08:00] [INFO] Entry proxy server started module=main host=0.0.0.0 ports=[18001]
+[2026-03-03T16:10:00+08:00] [INFO] SOCKS proxy server started module=main host=0.0.0.0 ports=[13010]
+[2026-03-03T16:10:00+08:00] [INFO] API server starting module=main host=0.0.0.0 port=10080
+[GIN-debug] Listening and serving HTTP on 0.0.0.0:10080

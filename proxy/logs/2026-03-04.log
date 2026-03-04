@@ -1,0 +1,359 @@
+[2026/03/04 00:02:41] heartbeat ack timeout: no ack in 45s
+[2026/03/04 00:02:41] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 00:02:41] retrying gateway connect in 1s
+[2026/03/04 00:02:42] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 00:02:42] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 00:02:42] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 00:02:42] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 00:20:47] heartbeat ack timeout: no ack in 45s
+[2026/03/04 00:20:47] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 00:20:47] retrying gateway connect in 1s
+[2026/03/04 00:20:48] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 00:20:48] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 00:20:48] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 00:20:48] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 00:38:10] heartbeat ack timeout: no ack in 45s
+[2026/03/04 00:38:10] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 00:38:10] retrying gateway connect in 1s
+[2026/03/04 00:38:11] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 00:38:11] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 00:38:11] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 00:38:11] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 00:47:06] heartbeat ack timeout: no ack in 45s
+[2026/03/04 00:47:06] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 00:47:06] retrying gateway connect in 1s
+[2026/03/04 00:47:07] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 00:47:07] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 00:47:07] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 00:47:07] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 01:03:06] heartbeat ack timeout: no ack in 45s
+[2026/03/04 01:03:06] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 01:03:06] retrying gateway connect in 1s
+[2026/03/04 01:03:08] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 01:03:08] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 01:03:08] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 01:03:08] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 01:20:11] heartbeat ack timeout: no ack in 45s
+[2026/03/04 01:20:11] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 01:20:11] retrying gateway connect in 1s
+[2026/03/04 01:20:12] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 01:20:12] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 01:20:12] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 01:20:12] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 01:37:33] heartbeat ack timeout: no ack in 45s
+[2026/03/04 01:37:33] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 01:37:33] retrying gateway connect in 1s
+[2026/03/04 01:37:34] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 01:37:34] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 01:37:34] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 01:37:34] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 01:48:12] heartbeat ack timeout: no ack in 45s
+[2026/03/04 01:48:12] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 01:48:12] retrying gateway connect in 1s
+[2026/03/04 01:48:13] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 01:48:13] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 01:48:13] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 01:48:13] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 02:06:28] heartbeat ack timeout: no ack in 45s
+[2026/03/04 02:06:28] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 02:06:28] retrying gateway connect in 1s
+[2026/03/04 02:06:29] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 02:06:29] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 02:06:29] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 02:06:29] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 02:24:16] heartbeat ack timeout: no ack in 45s
+[2026/03/04 02:24:16] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 02:24:16] retrying gateway connect in 1s
+[2026/03/04 02:24:18] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 02:24:18] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 02:24:18] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 02:24:18] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 02:41:46] heartbeat ack timeout: no ack in 45s
+[2026/03/04 02:41:46] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 02:41:46] retrying gateway connect in 1s
+[2026/03/04 02:41:47] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 02:41:47] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 02:41:47] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 02:41:47] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 02:49:14] heartbeat ack timeout: no ack in 45s
+[2026/03/04 02:49:14] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 02:49:14] retrying gateway connect in 1s
+[2026/03/04 02:49:15] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 02:49:15] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 02:49:15] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 02:49:15] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 02:51:36] heartbeat ack timeout: no ack in 45s
+[2026/03/04 02:51:36] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 02:51:36] retrying gateway connect in 1s
+[2026/03/04 02:51:37] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 02:51:37] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 02:51:37] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 02:51:37] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 03:08:26] heartbeat ack timeout: no ack in 45s
+[2026/03/04 03:08:26] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 03:08:26] retrying gateway connect in 1s
+[2026/03/04 03:08:27] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 03:08:27] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 03:08:27] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 03:08:27] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 03:25:41] heartbeat ack timeout: no ack in 45s
+[2026/03/04 03:25:41] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 03:25:41] retrying gateway connect in 1s
+[2026/03/04 03:25:42] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 03:25:42] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 03:25:42] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 03:25:42] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 03:41:49] heartbeat ack timeout: no ack in 45s
+[2026/03/04 03:41:49] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 03:41:49] retrying gateway connect in 1s
+[2026/03/04 03:41:51] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 03:41:51] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 03:41:51] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 03:41:51] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 03:50:12] heartbeat ack timeout: no ack in 45s
+[2026/03/04 03:50:12] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 03:50:12] retrying gateway connect in 1s
+[2026/03/04 03:50:13] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 03:50:13] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 03:50:13] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 03:50:13] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 04:06:08] heartbeat ack timeout: no ack in 45s
+[2026/03/04 04:06:08] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 04:06:08] retrying gateway connect in 1s
+[2026/03/04 04:06:09] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 04:06:09] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 04:06:09] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 04:06:09] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 04:22:11] heartbeat ack timeout: no ack in 45s
+[2026/03/04 04:22:11] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 04:22:11] retrying gateway connect in 1s
+[2026/03/04 04:22:12] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 04:22:12] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 04:22:12] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 04:22:12] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 04:39:38] heartbeat ack timeout: no ack in 45s
+[2026/03/04 04:39:38] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 04:39:38] retrying gateway connect in 1s
+[2026/03/04 04:39:39] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 04:39:39] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 04:39:39] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 04:39:39] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 04:51:13] heartbeat ack timeout: no ack in 45s
+[2026/03/04 04:51:13] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 04:51:13] retrying gateway connect in 1s
+[2026/03/04 04:51:14] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 04:51:14] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 04:51:14] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 04:51:14] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 05:06:56] heartbeat ack timeout: no ack in 45s
+[2026/03/04 05:06:56] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 05:06:56] retrying gateway connect in 1s
+[2026/03/04 05:06:57] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 05:06:57] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 05:06:57] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 05:06:57] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 05:23:28] heartbeat ack timeout: no ack in 45s
+[2026/03/04 05:23:28] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 05:23:28] retrying gateway connect in 1s
+[2026/03/04 05:23:30] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 05:23:30] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 05:23:30] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 05:23:30] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 05:40:53] heartbeat ack timeout: no ack in 45s
+[2026/03/04 05:40:53] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 05:40:53] retrying gateway connect in 1s
+[2026/03/04 05:40:54] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 05:40:54] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 05:40:54] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 05:40:54] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 05:52:08] heartbeat ack timeout: no ack in 45s
+[2026/03/04 05:52:08] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 05:52:08] retrying gateway connect in 1s
+[2026/03/04 05:52:10] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 05:52:10] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 05:52:10] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 05:52:10] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 06:08:54] heartbeat ack timeout: no ack in 45s
+[2026/03/04 06:08:54] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 06:08:54] retrying gateway connect in 1s
+[2026/03/04 06:08:55] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 06:08:55] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 06:08:55] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 06:08:55] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 06:24:40] heartbeat ack timeout: no ack in 45s
+[2026/03/04 06:24:40] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 06:24:40] retrying gateway connect in 1s
+[2026/03/04 06:24:41] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 06:24:41] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 06:24:41] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 06:24:41] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 06:41:58] heartbeat ack timeout: no ack in 45s
+[2026/03/04 06:41:58] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 06:41:58] retrying gateway connect in 1s
+[2026/03/04 06:42:00] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 06:42:00] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 06:42:00] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 06:42:00] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 06:53:11] heartbeat ack timeout: no ack in 45s
+[2026/03/04 06:53:11] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 06:53:11] retrying gateway connect in 1s
+[2026/03/04 06:53:12] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 06:53:12] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 06:53:12] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 06:53:12] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 07:09:24] heartbeat ack timeout: no ack in 45s
+[2026/03/04 07:09:24] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 07:09:24] retrying gateway connect in 1s
+[2026/03/04 07:09:26] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 07:09:26] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 07:09:26] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 07:09:26] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 07:27:12] heartbeat ack timeout: no ack in 45s
+[2026/03/04 07:27:12] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 07:27:12] retrying gateway connect in 1s
+[2026/03/04 07:27:13] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 07:27:13] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 07:27:13] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 07:27:13] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 07:28:51] heartbeat ack timeout: no ack in 45s
+[2026/03/04 07:28:51] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 07:28:51] retrying gateway connect in 1s
+[2026/03/04 07:28:52] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 07:28:52] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 07:28:52] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 07:28:52] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 07:45:28] heartbeat ack timeout: no ack in 45s
+[2026/03/04 07:45:28] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 07:45:28] retrying gateway connect in 1s
+[2026/03/04 07:45:29] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 07:45:29] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 07:45:29] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 07:45:29] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 07:54:10] heartbeat ack timeout: no ack in 45s
+[2026/03/04 07:54:10] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 07:54:10] retrying gateway connect in 1s
+[2026/03/04 07:54:11] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 07:54:11] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 07:54:11] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 07:54:11] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 08:11:20] heartbeat ack timeout: no ack in 45s
+[2026/03/04 08:11:20] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 08:11:20] retrying gateway connect in 1s
+[2026/03/04 08:11:21] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 08:11:21] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 08:11:21] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 08:11:21] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 08:27:35] heartbeat ack timeout: no ack in 45s
+[2026/03/04 08:27:35] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 08:27:35] retrying gateway connect in 1s
+[2026/03/04 08:27:36] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 08:27:36] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 08:27:36] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 08:27:36] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 08:44:52] heartbeat ack timeout: no ack in 45s
+[2026/03/04 08:44:52] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 08:44:52] retrying gateway connect in 1s
+[2026/03/04 08:44:53] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 08:44:53] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 08:44:53] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 08:44:53] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 08:55:15] heartbeat ack timeout: no ack in 45s
+[2026/03/04 08:55:15] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 08:55:15] retrying gateway connect in 1s
+[2026/03/04 08:55:16] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 08:55:16] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 08:55:16] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 08:55:16] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 09:12:17] heartbeat ack timeout: no ack in 45s
+[2026/03/04 09:12:17] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 09:12:17] retrying gateway connect in 1s
+[2026/03/04 09:12:18] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 09:12:18] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 09:12:18] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 09:12:18] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 09:18:33] heartbeat ack timeout: no ack in 45s
+[2026/03/04 09:18:33] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 09:18:33] retrying gateway connect in 1s
+[2026/03/04 09:18:34] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 09:18:34] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 09:18:34] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 09:18:34] snapshot received: version=20260302040240 updated_at_unix=1772424160
+[2026/03/04 10:03:02] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 10:03:07] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/04 10:03:07] retrying gateway connect in 1s
+[2026/03/04 10:03:08] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 10:03:13] connecting to gateway server: 192.168.100.135:10443 [failed] (connect failed: timeout: no recent network activity)
+[2026/03/04 10:03:13] retrying gateway connect in 1s
+[2026/03/04 10:03:14] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 10:03:14] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 10:03:14] snapshot received: version=20260303103811 updated_at_unix=1772534291
+[2026/03/04 10:03:14] snapshot received: version=20260303103811 updated_at_unix=1772534291
+[2026/03/04 12:28:38] heartbeat ack timeout: no ack in 45s
+[2026/03/04 12:28:38] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 12:28:38] retrying gateway connect in 1s
+[2026/03/04 12:28:39] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 12:28:39] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 12:28:39] snapshot received: version=20260303103811 updated_at_unix=1772534291
+[2026/03/04 12:28:39] snapshot received: version=20260303103811 updated_at_unix=1772534291
+[2026/03/04 12:47:07] heartbeat ack timeout: no ack in 45s
+[2026/03/04 12:47:07] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 12:47:07] retrying gateway connect in 1s
+[2026/03/04 12:47:08] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 12:47:08] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 12:47:08] snapshot received: version=20260303103811 updated_at_unix=1772534291
+[2026/03/04 12:47:08] snapshot received: version=20260303103811 updated_at_unix=1772534291
+[2026/03/04 12:54:07] heartbeat ack timeout: no ack in 45s
+[2026/03/04 12:54:07] connecting to gateway server: 192.168.100.135:10443 [failed] (Application error 0x11 (local): heartbeat ack timeout)
+[2026/03/04 12:54:07] retrying gateway connect in 1s
+[2026/03/04 12:54:09] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 12:54:09] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 12:54:09] snapshot received: version=20260303103811 updated_at_unix=1772534291
+[2026/03/04 12:54:09] snapshot received: version=20260303103811 updated_at_unix=1772534291
+[2026/03/04 13:05:07] Client request - Source: 192.168.100.135:51067, Target: api.ipify.org
+[2026/03/04 13:05:07] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772600707609398000 conn=conn-2060b1089202910d
+[2026/03/04 13:05:09] target read closed: task_id=task-1772600707609398000 error=read tcp 192.168.100.135:51068->198.18.160.234:443: use of closed network connection
+[2026/03/04 13:05:09] proxy_finished gw=gateway-0007 duration_time=2320ms src=192.168.100.135:51067 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:51068 bytes_in=810B bytes_out=3619B conn=conn-2060b1089202910d status=499 reason=client_closed result=success
+[2026/03/04 13:05:57] Client request - Source: 192.168.100.135:51310, Target: api.ipify.org
+[2026/03/04 13:05:57] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772600757419728000 conn=conn-2e576e4a66ba4f44
+[2026/03/04 13:05:59] target read closed: task_id=task-1772600757419728000 error=read tcp 192.168.100.135:51311->198.18.160.234:443: use of closed network connection
+[2026/03/04 13:05:59] proxy_finished gw=gateway-0007 duration_time=2345ms src=192.168.100.135:51310 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:51311 bytes_in=810B bytes_out=3618B conn=conn-2e576e4a66ba4f44 status=499 reason=client_closed result=success
+[2026/03/04 13:34:13] Client request - Source: 192.168.100.135:59379, Target: api.ipify.org
+[2026/03/04 13:34:13] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772602453199777000 conn=conn-10451c017484e17f
+[2026/03/04 13:34:15] proxy_finished gw=gateway-0007 duration_time=2305ms src=192.168.100.135:59379 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:59380 bytes_in=810B bytes_out=3618B conn=conn-10451c017484e17f status=499 reason=client_closed result=success
+[2026/03/04 13:34:15] target read closed: task_id=task-1772602453199777000 error=read tcp 192.168.100.135:59380->198.18.160.234:443: use of closed network connection
+[2026/03/04 13:34:19] Client request - Source: 192.168.100.135:59430, Target: api.ipify.org
+[2026/03/04 13:34:19] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772602459305626000 conn=conn-0dc96cb7b427fa32
+[2026/03/04 13:34:21] target read closed: task_id=task-1772602459305626000 error=read tcp 192.168.100.135:59431->198.18.160.234:443: use of closed network connection
+[2026/03/04 13:34:21] proxy_finished gw=gateway-0007 duration_time=2312ms src=192.168.100.135:59430 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:59431 bytes_in=810B bytes_out=3620B conn=conn-0dc96cb7b427fa32 status=499 reason=client_closed result=success
+[2026/03/04 17:38:38] connecting to web server: http://192.168.100.135:8001 [success]
+[2026/03/04 17:38:38] connecting to gateway server: 192.168.100.135:10443 [success]
+[2026/03/04 17:38:38] snapshot received: version=20260304031823 updated_at_unix=1772594303
+[2026/03/04 17:38:38] snapshot received: version=20260304031823 updated_at_unix=1772594303
+[2026/03/04 17:48:58] Client request - Source: 192.168.100.135:59437, Target: api.ipify.org
+[2026/03/04 17:48:58] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772617738671670000 conn=conn-dda806176d8ea7f2
+[2026/03/04 17:49:01] target read closed: task_id=task-1772617738671670000 error=read tcp 192.168.100.135:59438->198.18.160.234:443: use of closed network connection
+[2026/03/04 17:49:01] proxy_finished gw=gateway-0007 duration_time=2325ms src=192.168.100.135:59437 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:59438 bytes_in=810B bytes_out=3618B conn=conn-dda806176d8ea7f2 status=499 reason=client_closed result=success
+[2026/03/04 17:49:33] Client request - Source: 192.168.100.135:59700, Target: api.ipify.org
+[2026/03/04 17:49:33] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772617773759745000 conn=conn-24e49e4a78e704c4
+[2026/03/04 17:49:36] proxy_finished gw=gateway-0007 duration_time=2311ms src=192.168.100.135:59700 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:59701 bytes_in=810B bytes_out=3619B conn=conn-24e49e4a78e704c4 status=499 reason=client_closed result=success
+[2026/03/04 17:49:36] target read closed: task_id=task-1772617773759745000 error=read tcp 192.168.100.135:59701->198.18.160.234:443: use of closed network connection
+[2026/03/04 17:49:51] Client request - Source: 192.168.100.135:59825, Target: api.ipify.org
+[2026/03/04 17:49:51] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772617791698065000 conn=conn-d9fb37f6aea9c2ed
+[2026/03/04 17:49:54] target read closed: task_id=task-1772617791698065000 error=read tcp 192.168.100.135:59826->198.18.160.234:443: use of closed network connection
+[2026/03/04 17:49:54] proxy_finished gw=gateway-0007 duration_time=2312ms src=192.168.100.135:59825 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:59826 bytes_in=810B bytes_out=3619B conn=conn-d9fb37f6aea9c2ed status=499 reason=client_closed result=success
+[2026/03/04 17:50:41] Client request - Source: 192.168.100.135:60523, Target: api.ipify.org
+[2026/03/04 17:50:42] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772617841984281000 conn=conn-6873ea731ed67621
+[2026/03/04 17:50:44] target read closed: task_id=task-1772617841984281000 error=read tcp 192.168.100.135:60524->198.18.160.234:443: use of closed network connection
+[2026/03/04 17:50:44] proxy_finished gw=gateway-0007 duration_time=2310ms src=192.168.100.135:60523 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:60524 bytes_in=810B bytes_out=3620B conn=conn-6873ea731ed67621 status=499 reason=client_closed result=success
+[2026/03/04 17:51:31] Client request - Source: 192.168.100.135:61063, Target: api.ipify.org
+[2026/03/04 17:51:31] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772617891048748000 conn=conn-3021e71f3688e85b
+[2026/03/04 17:51:33] target read closed: task_id=task-1772617891048748000 error=read tcp 192.168.100.135:61064->198.18.160.234:443: use of closed network connection
+[2026/03/04 17:51:33] proxy_finished gw=gateway-0007 duration_time=2309ms src=192.168.100.135:61063 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:61064 bytes_in=810B bytes_out=3598B conn=conn-3021e71f3688e85b status=499 reason=client_closed result=success
+[2026/03/04 17:51:38] Client request - Source: 192.168.100.135:61127, Target: api.ipify.org
+[2026/03/04 17:51:38] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772617898724476000 conn=conn-352fb55d43e36d44
+[2026/03/04 17:51:41] proxy_finished gw=gateway-0007 duration_time=2313ms src=192.168.100.135:61127 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:61128 bytes_in=810B bytes_out=3618B conn=conn-352fb55d43e36d44 status=499 reason=client_closed result=success
+[2026/03/04 17:51:41] target read closed: task_id=task-1772617898724476000 error=read tcp 192.168.100.135:61128->198.18.160.234:443: use of closed network connection
+[2026/03/04 17:51:42] Client request - Source: 192.168.100.135:61150, Target: api.ipify.org
+[2026/03/04 17:51:42] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772617902043725000 conn=conn-d1f36e4ce236c45c
+[2026/03/04 17:51:44] target read closed: task_id=task-1772617902043725000 error=read tcp 192.168.100.135:61151->198.18.160.234:443: use of closed network connection
+[2026/03/04 17:51:44] proxy_finished gw=gateway-0007 duration_time=2307ms src=192.168.100.135:61150 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:61151 bytes_in=810B bytes_out=3598B conn=conn-d1f36e4ce236c45c status=499 reason=client_closed result=success
