@@ -71,8 +71,27 @@ BIN_PATH="${INSTALL_DIR}/socks-proxy"
 
 mkdir -p "$INSTALL_DIR"
 echo "Downloading agent from: $BIN_URL"
-curl -fsSL "$BIN_URL" -o "$BIN_PATH"
-chmod +x "$BIN_PATH"
+TMP_BIN="$(mktemp "${TMPDIR:-/tmp}/socks-proxy.XXXXXX")"
+cleanup_tmp() {
+  rm -f "$TMP_BIN"
+}
+trap cleanup_tmp EXIT
+
+curl -fsSL "$BIN_URL" -o "$TMP_BIN"
+chmod +x "$TMP_BIN"
+
+if mv "$TMP_BIN" "$BIN_PATH" 2>/dev/null; then
+  chmod +x "$BIN_PATH"
+else
+  if ! command -v sudo >/dev/null 2>&1; then
+    echo "No permission to write ${BIN_PATH}, and sudo is not available."
+    exit 1
+  fi
+  echo "No write permission for ${BIN_PATH}, retrying with sudo..."
+  sudo mkdir -p "$INSTALL_DIR"
+  sudo mv "$TMP_BIN" "$BIN_PATH"
+  sudo chmod +x "$BIN_PATH"
+fi
 
 echo "Starting agent..."
 RUN_ARGS=(run --web-server-url "$SERVER" --agent-id "$AGENT_ID" --secret "$AGENT_SECRET")
