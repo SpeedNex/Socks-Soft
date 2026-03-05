@@ -17,13 +17,13 @@ while [[ $# -gt 0 ]]; do
     --token=*) TOKEN="${1#*=}"; shift ;;
     --agent-id=*) AGENT_ID="${1#*=}"; shift ;;
     --secret=*) AGENT_SECRET="${1#*=}"; shift ;;
-    --server=*) SERVER="${1#*=}"; shift ;;
+    --web-server-url=*) SERVER="${1#*=}"; shift ;;
     --install-dir=*) INSTALL_DIR="${1#*=}"; shift ;;
     --base-url=*) BASE_URL="${1#*=}"; shift ;;
     --token) TOKEN="${2:-}"; shift 2 ;;
     --agent-id) AGENT_ID="${2:-}"; shift 2 ;;
     --secret) AGENT_SECRET="${2:-}"; shift 2 ;;
-    --server) SERVER="${2:-}"; shift 2 ;;
+    --web-server-url) SERVER="${2:-}"; shift 2 ;;
     --install-dir) INSTALL_DIR="${2:-}"; shift 2 ;;
     --base-url) BASE_URL="${2:-}"; shift 2 ;;
     --daemon) DAEMON_MODE="true"; shift ;;
@@ -47,7 +47,7 @@ if [[ -z "$AGENT_SECRET" && -z "$TOKEN" ]]; then
 fi
 
 if [[ -z "$SERVER" ]]; then
-  echo "Missing --server"
+  echo "Missing --web-server-url"
   exit 1
 fi
 
@@ -77,7 +77,7 @@ curl -fsSL "$BIN_URL" -o "$BIN_PATH"
 chmod +x "$BIN_PATH"
 
 echo "Starting agent..."
-RUN_ARGS=(run --server "$SERVER" --agent-id "$AGENT_ID" --secret "$AGENT_SECRET")
+RUN_ARGS=(run --web-server-url "$SERVER" --agent-id "$AGENT_ID" --secret "$AGENT_SECRET")
 RUN_ARGS+=("${EXTRA_ARGS[@]}")
 
 if [[ "$DAEMON_MODE" == "true" ]]; then
