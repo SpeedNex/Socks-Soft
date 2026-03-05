@@ -1,0 +1,18 @@
+[2026/03/05 15:31:47] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:31:47] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:31:47] retrying bootstrap in 1s
+[2026/03/05 15:31:48] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:31:48] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:31:48] retrying bootstrap in 2s
+[2026/03/05 15:31:50] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:31:50] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:31:50] retrying bootstrap in 4s
+[2026/03/05 15:31:54] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:31:54] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:31:54] retrying bootstrap in 8s
+[2026/03/05 15:32:02] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:32:02] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:32:02] retrying bootstrap in 16s
+[2026/03/05 15:32:18] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:32:18] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:32:18] retrying bootstrap in 30s

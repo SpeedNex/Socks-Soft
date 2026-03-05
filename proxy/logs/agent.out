@@ -6523,3 +6523,15 @@ agent already running (pid 20237)
 [2026/03/04 17:51:42] Client request - Source: 192.168.100.135:61150, Target: api.ipify.org
 [2026/03/04 17:51:42] Successfully connected to target server: 198.18.160.234:443 task_id=task-1772617902043725000 conn=conn-d1f36e4ce236c45c
 [2026/03/04 17:51:44] proxy_finished gw=gateway-0007 duration_time=2307ms src=192.168.100.135:61150 user_id=1 proxy_username=ni4h5sewefvs zone=US dst_domain=api.ipify.org dst_ip_port=198.18.160.234:443 proto=socks5 CONNECT route=- egress=192.168.100.135:61151 bytes_in=810B bytes_out=3598B conn=conn-d1f36e4ce236c45c status=499 reason=client_closed result=success
+[2026/03/05 15:31:47] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:31:47] retrying bootstrap in 1s
+[2026/03/05 15:31:48] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:31:48] retrying bootstrap in 2s
+[2026/03/05 15:31:50] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:31:50] retrying bootstrap in 4s
+[2026/03/05 15:31:54] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:31:54] retrying bootstrap in 8s
+[2026/03/05 15:32:02] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:32:02] retrying bootstrap in 16s
+[2026/03/05 15:32:18] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:32:18] retrying bootstrap in 30s
