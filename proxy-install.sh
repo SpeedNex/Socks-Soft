@@ -67,9 +67,14 @@ esac
 BIN_URL="${BASE_URL}/socks-proxy-${OS}-${ARCH}"
 [[ "$OS" == "windows" ]] && BIN_URL="${BIN_URL}.exe"
 
+if ! mkdir -p "$INSTALL_DIR" 2>/dev/null || [[ ! -w "$INSTALL_DIR" ]]; then
+  INSTALL_DIR="${HOME}/.local/bin"
+  mkdir -p "$INSTALL_DIR"
+  echo "No write permission for /usr/local/bin, using ${INSTALL_DIR}"
+fi
+
 BIN_PATH="${INSTALL_DIR}/socks-proxy"
 
-mkdir -p "$INSTALL_DIR"
 echo "Downloading agent from: $BIN_URL"
 TMP_BIN="$(mktemp "${TMPDIR:-/tmp}/socks-proxy.XXXXXX")"
 cleanup_tmp() {
