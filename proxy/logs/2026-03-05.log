@@ -16,3 +16,60 @@
 [2026/03/05 15:32:18] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
 [2026/03/05 15:32:18] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
 [2026/03/05 15:32:18] retrying bootstrap in 30s
+[2026/03/05 15:53:35] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:53:35] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:53:35] retrying bootstrap in 1s
+[2026/03/05 15:53:36] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:53:36] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:53:36] retrying bootstrap in 2s
+[2026/03/05 15:53:38] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:53:38] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:53:38] retrying bootstrap in 4s
+[2026/03/05 15:53:43] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:53:43] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:53:43] retrying bootstrap in 1s
+[2026/03/05 15:53:44] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:53:44] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:53:44] retrying bootstrap in 2s
+[2026/03/05 15:53:46] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:53:46] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:53:46] retrying bootstrap in 4s
+[2026/03/05 15:53:50] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:53:50] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:53:50] retrying bootstrap in 8s
+[2026/03/05 15:53:58] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:53:58] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:53:58] retrying bootstrap in 16s
+[2026/03/05 15:54:14] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:54:14] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:54:14] retrying bootstrap in 30s
+[2026/03/05 15:54:44] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:54:44] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:54:44] retrying bootstrap in 30s
+[2026/03/05 15:55:14] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:55:14] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:55:14] retrying bootstrap in 30s
+[2026/03/05 15:55:39] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:55:39] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:55:39] retrying bootstrap in 1s
+[2026/03/05 15:55:40] bootstrap request: POST http://127.0.0.1:3000/proxy/agent/bootstrap
+[2026/03/05 15:55:40] connecting to web server: http://127.0.0.1:3000 [failed] (bootstrap request failed (POST http://127.0.0.1:3000/proxy/agent/bootstrap): http 404)
+[2026/03/05 15:55:40] retrying bootstrap in 2s
+[2026/03/05 15:55:47] health check request: GET http://127.0.0.1:8000/healthz
+[2026/03/05 15:55:47] connecting to web server: http://127.0.0.1:8000 [failed] (health check failed (GET http://127.0.0.1:8000/healthz): Get "http://127.0.0.1:8000/healthz": dial tcp 127.0.0.1:8000: connect: connection refused)
+[2026/03/05 15:55:47] retrying bootstrap in 1s
+[2026/03/05 15:55:48] health check request: GET http://127.0.0.1:8000/healthz
+[2026/03/05 15:55:48] connecting to web server: http://127.0.0.1:8000 [failed] (health check failed (GET http://127.0.0.1:8000/healthz): Get "http://127.0.0.1:8000/healthz": dial tcp 127.0.0.1:8000: connect: connection refused)
+[2026/03/05 15:55:48] retrying bootstrap in 2s
+[2026/03/05 15:55:50] health check request: GET http://127.0.0.1:8000/healthz
+[2026/03/05 15:55:50] connecting to web server: http://127.0.0.1:8000 [failed] (health check failed (GET http://127.0.0.1:8000/healthz): Get "http://127.0.0.1:8000/healthz": dial tcp 127.0.0.1:8000: connect: connection refused)
+[2026/03/05 15:55:50] retrying bootstrap in 4s
+[2026/03/05 15:55:54] health check request: GET http://127.0.0.1:8000/healthz
+[2026/03/05 15:55:54] connecting to web server: http://127.0.0.1:8000 [failed] (health check failed (GET http://127.0.0.1:8000/healthz): Get "http://127.0.0.1:8000/healthz": dial tcp 127.0.0.1:8000: connect: connection refused)
+[2026/03/05 15:55:54] retrying bootstrap in 8s
+[2026/03/05 15:56:02] health check request: GET http://127.0.0.1:8000/healthz
+[2026/03/05 15:56:02] connecting to web server: http://127.0.0.1:8000 [failed] (health check failed (GET http://127.0.0.1:8000/healthz): Get "http://127.0.0.1:8000/healthz": dial tcp 127.0.0.1:8000: connect: connection refused)
+[2026/03/05 15:56:02] retrying bootstrap in 16s
+[2026/03/05 15:56:18] health check request: GET http://127.0.0.1:8000/healthz
+[2026/03/05 15:56:18] connecting to web server: http://127.0.0.1:8000 [failed] (health check failed (GET http://127.0.0.1:8000/healthz): Get "http://127.0.0.1:8000/healthz": dial tcp 127.0.0.1:8000: connect: connection refused)
+[2026/03/05 15:56:18] retrying bootstrap in 30s
