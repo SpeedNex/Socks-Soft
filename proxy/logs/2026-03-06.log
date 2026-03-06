@@ -165,3 +165,14 @@
 [2026/03/06 09:41:34] health check request: GET http://127.0.0.1:8001/healthz
 [2026/03/06 09:41:34] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
 [2026/03/06 09:41:34] retrying bootstrap in 30s
+[2026/03/06 16:16:43] connecting to web server: http://127.0.0.1:8001 [[32msuccess[0m]
+[2026/03/06 16:16:43] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 16:16:43] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 16:16:43] snapshot received: version=20260306081548 updated_at_unix=1772784948
+[2026/03/06 16:16:43] connecting to gateway server: 192.168.100.135:10443 [[32msuccess[0m]
+[2026/03/06 16:16:43] startup result: web=[[32msuccess[0m] gateway=[[32msuccess[0m] snapshot=[[32msuccess[0m] -> [32mall services running successfully[0m
+[2026/03/06 16:16:43] snapshot received: version=20260306081548 updated_at_unix=1772784948
+[2026/03/06 16:26:20] Client request - Source: 192.168.100.135:60050, Target: api.ipify.org
+[2026/03/06 16:26:20] Successfully connected to target server: 198.18.148.126:443 task_id=task-1772785580581955000 conn=conn-7fc5bc6af9277711
+[2026/03/06 16:26:22] target read closed: task_id=task-1772785580581955000 error=read tcp 192.168.100.135:60051->198.18.148.126:443: use of closed network connection
+[2026/03/06 16:26:22] proxy_finished gw=gateway-0001 duration_time=2319ms src=192.168.100.135:60050 user_id=1 proxy_username=r49t5q7fxraw zone=as dst_domain=api.ipify.org dst_ip_port=198.18.148.126:443 proto=socks5 CONNECT route=- egress=192.168.100.135:60051 bytes_in=810B bytes_out=3618B conn=conn-7fc5bc6af9277711 status=499 reason=client_closed result=success

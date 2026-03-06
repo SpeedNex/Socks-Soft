@@ -5,6 +5,7 @@ GATEWAY_ID=""
 SECRET=""
 REDIS="127.0.0.1:6379"
 INSTALL_DIR="/usr/local/bin"
+INSTALL_DIR_EXPLICIT="false"
 BASE_URL="https://github.com/SpeedNex/Socks-Soft/raw/main/gateway"
 DAEMON_MODE="false"
 PID_FILE=""
@@ -21,11 +22,11 @@ while [[ $# -gt 0 ]]; do
     --gateway-id=*) GATEWAY_ID="${1#*=}"; shift ;;
     --secret=*) SECRET="${1#*=}"; shift ;;
     --redis=*) REDIS="${1#*=}"; shift ;;
-    --install-dir=*) INSTALL_DIR="${1#*=}"; shift ;;
+    --install-dir=*) INSTALL_DIR="${1#*=}"; INSTALL_DIR_EXPLICIT="true"; shift ;;
     --gateway-id) GATEWAY_ID="${2:-}"; shift 2 ;;
     --secret) SECRET="${2:-}"; shift 2 ;;
     --redis) REDIS="${2:-}"; shift 2 ;;
-    --install-dir) INSTALL_DIR="${2:-}"; shift 2 ;;
+    --install-dir) INSTALL_DIR="${2:-}"; INSTALL_DIR_EXPLICIT="true"; shift 2 ;;
     --daemon) DAEMON_MODE="true"; shift ;;
     --pid-file=*) PID_FILE="${1#*=}"; shift ;;
     --log-file=*) LOG_FILE="${1#*=}"; shift ;;
@@ -67,10 +68,34 @@ esac
 BIN_URL="${BASE_URL}/socks-gateway-${OS}-${ARCH}"
 [[ "$OS" == "windows" ]] && BIN_URL="${BIN_URL}.exe"
 
+ensure_install_dir() {
+  local target_dir="$1"
+  if mkdir -p "$target_dir" 2>/dev/null && [[ -w "$target_dir" ]]; then
+    return 0
+  fi
+  return 1
+}
+
+if ! ensure_install_dir "$INSTALL_DIR"; then
+  if [[ "$INSTALL_DIR_EXPLICIT" == "true" ]]; then
+    echo "Install dir is not writable: $INSTALL_DIR"
+    exit 1
+  fi
+
+  FALLBACK_INSTALL_DIR="${HOME}/.local/bin"
+  if ensure_install_dir "$FALLBACK_INSTALL_DIR"; then
+    echo "Install dir is not writable: $INSTALL_DIR"
+    echo "Falling back to: $FALLBACK_INSTALL_DIR"
+    INSTALL_DIR="$FALLBACK_INSTALL_DIR"
+  else
+    echo "Install dir is not writable: $INSTALL_DIR"
+    echo "Fallback install dir is also not writable: $FALLBACK_INSTALL_DIR"
+    exit 1
+  fi
+fi
+
 BIN_PATH="${INSTALL_DIR}/socks-gateway"
 CONFIG_PATH="${INSTALL_DIR}/config.json"
-
-mkdir -p "$INSTALL_DIR"
 echo "Downloading gateway from: $BIN_URL"
 curl -fsSL "$BIN_URL" -o "$BIN_PATH"
 chmod +x "$BIN_PATH"
@@ -247,6 +272,11 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
 
   nohup "$BIN_PATH" "${RUN_ARGS[@]}" >>"$LOG_FILE" 2>&1 &
   NEW_PID=$!
+  sleep 1
+  if ! kill -0 "$NEW_PID" 2>/dev/null; then
+    echo "Gateway failed to stay running. Check log: ${LOG_FILE}"
+    exit 1
+  fi
   echo "$NEW_PID" >"$PID_FILE"
   echo "Gateway started in background."
   echo "PID: ${NEW_PID}"
