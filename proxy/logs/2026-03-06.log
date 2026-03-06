@@ -1,0 +1,167 @@
+[2026/03/06 09:20:02] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:02] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:02] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:02] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:02] retrying gateway connect in 1s
+[2026/03/06 09:20:04] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:04] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:04] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:04] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:04] retrying gateway connect in 1s
+[2026/03/06 09:20:05] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:05] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:05] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:05] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:05] retrying gateway connect in 1s
+[2026/03/06 09:20:06] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:06] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:06] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:06] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:06] retrying gateway connect in 1s
+[2026/03/06 09:20:07] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:07] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:07] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:07] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:07] retrying gateway connect in 1s
+[2026/03/06 09:20:08] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:08] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:08] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:08] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:08] retrying gateway connect in 1s
+[2026/03/06 09:20:09] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:09] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:09] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:09] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:09] retrying gateway connect in 1s
+[2026/03/06 09:20:10] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:10] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:10] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:10] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:10] retrying gateway connect in 1s
+[2026/03/06 09:20:11] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:11] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:11] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:11] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:11] retrying gateway connect in 1s
+[2026/03/06 09:20:12] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:12] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:12] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:12] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:12] retrying gateway connect in 1s
+[2026/03/06 09:20:14] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:14] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:14] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:14] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:14] retrying gateway connect in 1s
+[2026/03/06 09:20:15] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:15] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:15] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:15] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:15] retrying gateway connect in 1s
+[2026/03/06 09:20:16] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:16] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:16] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:16] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:16] retrying gateway connect in 1s
+[2026/03/06 09:20:17] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:17] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:17] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:17] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:17] retrying gateway connect in 1s
+[2026/03/06 09:20:18] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:18] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:18] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:18] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:18] retrying gateway connect in 1s
+[2026/03/06 09:20:19] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:19] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:19] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:19] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:19] retrying gateway connect in 1s
+[2026/03/06 09:20:20] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:20] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:20] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:20] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:20] retrying gateway connect in 1s
+[2026/03/06 09:20:21] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:21] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:21] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:21] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:21] retrying gateway connect in 1s
+[2026/03/06 09:20:23] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:23] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:23] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:23] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:23] retrying gateway connect in 1s
+[2026/03/06 09:20:24] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:24] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:24] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:24] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:24] retrying gateway connect in 1s
+[2026/03/06 09:20:25] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:25] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:25] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:25] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:25] retrying gateway connect in 1s
+[2026/03/06 09:20:26] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:26] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:26] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:26] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:26] retrying gateway connect in 1s
+[2026/03/06 09:20:27] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:27] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:27] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:27] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:27] retrying gateway connect in 1s
+[2026/03/06 09:20:28] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:28] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:28] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:28] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:28] retrying gateway connect in 1s
+[2026/03/06 09:20:29] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:29] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:29] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:29] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:29] retrying gateway connect in 1s
+[2026/03/06 09:20:30] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/06 09:20:30] connecting to gateway server: 192.168.100.135:10443 [dialing]
+[2026/03/06 09:20:30] connecting to gateway server: 192.168.100.135:10443 [register sent]
+[2026/03/06 09:20:30] connecting to gateway server: 192.168.100.135:10443 [failed] (register rejected)
+[2026/03/06 09:20:30] retrying gateway connect in 1s
+[2026/03/06 09:20:36] bootstrap request: POST http://127.0.0.1:8001/proxy/agent/bootstrap
+[2026/03/06 09:20:36] connecting to web server: http://127.0.0.1:8001 [failed] (bootstrap request failed (POST http://127.0.0.1:8001/proxy/agent/bootstrap): Post "http://127.0.0.1:8001/proxy/agent/bootstrap": context deadline exceeded (Client.Timeout exceeded while awaiting headers))
+[2026/03/06 09:20:36] retrying bootstrap in 2s
+[2026/03/06 09:20:43] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:20:43] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers))
+[2026/03/06 09:20:43] retrying bootstrap in 4s
+[2026/03/06 09:20:52] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:20:52] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers))
+[2026/03/06 09:20:52] retrying bootstrap in 8s
+[2026/03/06 09:21:05] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:21:05] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": context deadline exceeded (Client.Timeout exceeded while awaiting headers))
+[2026/03/06 09:21:05] retrying bootstrap in 16s
+[2026/03/06 09:23:58] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:38:04] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:38:04] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/06 09:38:04] retrying bootstrap in 30s
+[2026/03/06 09:38:34] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:38:34] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/06 09:38:34] retrying bootstrap in 30s
+[2026/03/06 09:39:04] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:39:04] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/06 09:39:04] retrying bootstrap in 30s
+[2026/03/06 09:39:34] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:39:34] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/06 09:39:34] retrying bootstrap in 30s
+[2026/03/06 09:40:04] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:40:04] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/06 09:40:04] retrying bootstrap in 30s
+[2026/03/06 09:40:34] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:40:34] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/06 09:40:34] retrying bootstrap in 30s
+[2026/03/06 09:41:04] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:41:04] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/06 09:41:04] retrying bootstrap in 30s
+[2026/03/06 09:41:34] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/06 09:41:34] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/06 09:41:34] retrying bootstrap in 30s
