@@ -74,6 +74,7 @@ if ! mkdir -p "$INSTALL_DIR" 2>/dev/null || [[ ! -w "$INSTALL_DIR" ]]; then
 fi
 
 BIN_PATH="${INSTALL_DIR}/socks-proxy"
+CONFIG_PATH="${INSTALL_DIR}/agent.config.json"
 
 echo "Downloading agent from: $BIN_URL"
 TMP_BIN="$(mktemp "${TMPDIR:-/tmp}/socks-proxy.XXXXXX")"
@@ -97,6 +98,34 @@ else
   sudo mv "$TMP_BIN" "$BIN_PATH"
   sudo chmod +x "$BIN_PATH"
 fi
+
+# Persist first-run/runtime parameters for future restarts and audits.
+python3 - "$CONFIG_PATH" "$AGENT_ID" "$AGENT_SECRET" "$SERVER" <<'PY'
+import json
+import os
+import sys
+
+config_path, agent_id, secret, server = sys.argv[1:]
+cfg = {}
+if os.path.exists(config_path):
+    try:
+        with open(config_path, "r", encoding="utf-8") as f:
+            loaded = json.load(f)
+            if isinstance(loaded, dict):
+                cfg = loaded
+    except Exception:
+        cfg = {}
+
+cfg["agent_id"] = agent_id
+cfg["web_server_url"] = server
+cfg["agent_secret"] = secret
+
+with open(config_path, "w", encoding="utf-8") as f:
+    json.dump(cfg, f, ensure_ascii=False, indent=2)
+    f.write("\n")
+
+print(f"Updated config: {config_path}")
+PY
 
 echo "Starting agent..."
 RUN_ARGS=(run --web-server-url "$SERVER" --agent-id "$AGENT_ID" --secret "$AGENT_SECRET")
