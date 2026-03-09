@@ -7,7 +7,7 @@ AGENT_SECRET=""
 SERVER=""
 INSTALL_DIR="/usr/local/bin"
 BASE_URL="https://raw.githubusercontent.com/SpeedNex/Socks-Soft/main/proxy"
-DAEMON_MODE="false"
+DAEMON_MODE="true"
 PID_FILE=""
 LOG_FILE=""
 EXTRA_ARGS=()
@@ -25,6 +25,7 @@ while [[ $# -gt 0 ]]; do
     --web-server-url) SERVER="${2:-}"; shift 2 ;;
     --base-url) BASE_URL="${2:-}"; shift 2 ;;
     --daemon) DAEMON_MODE="true"; shift ;;
+    --foreground) DAEMON_MODE="false"; shift ;;
     --pid-file=*) PID_FILE="${1#*=}"; shift ;;
     --log-file=*) LOG_FILE="${1#*=}"; shift ;;
     --pid-file) PID_FILE="${2:-}"; shift 2 ;;
@@ -127,7 +128,11 @@ with open(config_path, "w", encoding="utf-8") as f:
 print(f"Updated config: {config_path}")
 PY
 
-echo "Starting agent..."
+if [[ "$DAEMON_MODE" == "true" ]]; then
+  echo "Starting agent in background..."
+else
+  echo "Starting agent in foreground..."
+fi
 RUN_ARGS=(run --web-server-url "$SERVER" --agent-id "$AGENT_ID" --secret "$AGENT_SECRET")
 RUN_ARGS+=("${EXTRA_ARGS[@]}")
 

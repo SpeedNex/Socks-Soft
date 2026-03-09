@@ -7,7 +7,7 @@ REDIS="127.0.0.1:6379"
 INSTALL_DIR="/usr/local/bin"
 INSTALL_DIR_EXPLICIT="false"
 BASE_URL="https://github.com/SpeedNex/Socks-Soft/raw/main/gateway"
-DAEMON_MODE="false"
+DAEMON_MODE="true"
 PID_FILE=""
 LOG_FILE=""
 LISTEN_API=""
@@ -28,6 +28,7 @@ while [[ $# -gt 0 ]]; do
     --redis) REDIS="${2:-}"; shift 2 ;;
     --install-dir) INSTALL_DIR="${2:-}"; INSTALL_DIR_EXPLICIT="true"; shift 2 ;;
     --daemon) DAEMON_MODE="true"; shift ;;
+    --foreground) DAEMON_MODE="false"; shift ;;
     --pid-file=*) PID_FILE="${1#*=}"; shift ;;
     --log-file=*) LOG_FILE="${1#*=}"; shift ;;
     --listen-api=*) LISTEN_API="${1#*=}"; shift ;;
@@ -233,7 +234,11 @@ with open(config_path, "w", encoding="utf-8") as f:
 print(f"Updated config: {config_path}")
 PY
 
-echo "Starting gateway..."
+if [[ "$DAEMON_MODE" == "true" ]]; then
+  echo "Starting gateway in background..."
+else
+  echo "Starting gateway in foreground..."
+fi
 RUN_ARGS=(run --gateway-id "$GATEWAY_ID" --secret "$SECRET" --redis "$REDIS")
 if [[ -n "$LISTEN_API" ]]; then
   RUN_ARGS+=(--listen-api "$LISTEN_API")
