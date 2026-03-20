@@ -106,28 +106,52 @@ extract_installed_version() {
 
   local version=""
   local build_time=""
+  local go_cmd=""
 
-  if command -v strings >/dev/null 2>&1; then
-    version="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+\+[0-9]{14}-[0-9]+' | head -n 1 || true)"
-    if [[ -z "$version" ]]; then
-      version="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+(-dev)?' | head -n 1 || true)"
-    fi
-    build_time="$(strings "$bin" 2>/dev/null \
-      | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z' \
-      | grep -v '^2006-01-02T15:04:05Z$' \
-      | head -n 1 || true)"
-  fi
   if command -v go >/dev/null 2>&1; then
-    if [[ -z "$build_time" ]]; then
-      build_time="$(go version -m "$bin" 2>/dev/null | awk '/vcs.time/{print $2; exit}' || true)"
-    fi
-    if [[ -z "$version" ]]; then
-      local rev=""
-      rev="$(go version -m "$bin" 2>/dev/null | awk '/vcs.revision/{print $2; exit}' || true)"
-      if [[ -n "$rev" ]]; then
-        version="rev-${rev:0:12}"
+    go_cmd="$(command -v go)"
+  elif [[ -x "/usr/local/go/bin/go" ]]; then
+    go_cmd="/usr/local/go/bin/go"
+  fi
+
+  if [[ -n "$go_cmd" ]]; then
+    local meta=""
+    meta="$("$go_cmd" version -m "$bin" 2>/dev/null || true)"
+    if [[ -n "$meta" ]]; then
+      version="$(printf '%s\n' "$meta" | sed -n 's/.*buildinfo\.Version=\([^ "]*\).*/\1/p' | head -n 1)"
+      build_time="$(printf '%s\n' "$meta" | sed -n 's/.*buildinfo\.BuildTimeUTC=\([^ "]*\).*/\1/p' | head -n 1)"
+      if [[ -z "$build_time" ]]; then
+        build_time="$(printf '%s\n' "$meta" | awk '/vcs.time/{print $2; exit}')"
+      fi
+      if [[ -z "$version" ]]; then
+        local rev=""
+        rev="$(printf '%s\n' "$meta" | awk '/vcs.revision/{print $2; exit}')"
+        if [[ -n "$rev" ]]; then
+          version="rev-${rev:0:12}"
+        fi
       fi
     fi
+  fi
+
+  if [[ -z "$version" ]]; then
+    version="$(grep -aEo 'buildinfo\.Version=[^ "]*' "$bin" 2>/dev/null | sed 's/^buildinfo\.Version=//' | head -n 1 || true)"
+  fi
+  if [[ -z "$build_time" ]]; then
+    build_time="$(grep -aEo 'buildinfo\.BuildTimeUTC=[^ "]*' "$bin" 2>/dev/null | sed 's/^buildinfo\.BuildTimeUTC=//' | head -n 1 || true)"
+  fi
+  if [[ -z "$version" ]]; then
+    version="$(grep -aEo '[0-9]+\.[0-9]+\.[0-9]+\+[0-9]{14}-[0-9]+' "$bin" 2>/dev/null | head -n 1 || true)"
+  fi
+  if [[ -z "$version" ]]; then
+    version="$(grep -aEo '[0-9]+\.[0-9]+\.[0-9]+-dev' "$bin" 2>/dev/null | head -n 1 || true)"
+  fi
+  if [[ -z "$version" ]]; then
+    version="$(grep -aEo '[0-9]+\.[0-9]+\.[0-9]+' "$bin" 2>/dev/null | head -n 1 || true)"
+  fi
+  if [[ -z "$build_time" ]]; then
+    build_time="$(grep -aEo '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z' "$bin" 2>/dev/null \
+      | grep -v '^2006-01-02T15:04:05Z$' \
+      | head -n 1 || true)"
   fi
 
   if [[ -n "$version" ]]; then
