@@ -109,7 +109,25 @@ extract_installed_version() {
 
   if command -v strings >/dev/null 2>&1; then
     version="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+\+[0-9]{14}-[0-9]+' | head -n 1 || true)"
-    build_time="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z' | head -n 1 || true)"
+    if [[ -z "$version" ]]; then
+      version="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+(-dev)?' | head -n 1 || true)"
+    fi
+    build_time="$(strings "$bin" 2>/dev/null \
+      | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z' \
+      | grep -v '^2006-01-02T15:04:05Z$' \
+      | head -n 1 || true)"
+  fi
+  if command -v go >/dev/null 2>&1; then
+    if [[ -z "$build_time" ]]; then
+      build_time="$(go version -m "$bin" 2>/dev/null | awk '/vcs.time/{print $2; exit}' || true)"
+    fi
+    if [[ -z "$version" ]]; then
+      local rev=""
+      rev="$(go version -m "$bin" 2>/dev/null | awk '/vcs.revision/{print $2; exit}' || true)"
+      if [[ -n "$rev" ]]; then
+        version="rev-${rev:0:12}"
+      fi
+    fi
   fi
 
   if [[ -n "$version" ]]; then
