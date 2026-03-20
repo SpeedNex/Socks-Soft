@@ -266,13 +266,33 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
   fi
 
   mkdir -p "$(dirname "$PID_FILE")" "$(dirname "$LOG_FILE")"
+  stop_existing() {
+    local pid="$1"
+    if [[ -z "$pid" ]]; then
+      return 0
+    fi
+    if kill -0 "$pid" 2>/dev/null; then
+      echo "Stopping existing gateway process: PID ${pid}"
+      kill "$pid" 2>/dev/null || true
+      sleep 1
+      if kill -0 "$pid" 2>/dev/null; then
+        kill -9 "$pid" 2>/dev/null || true
+      fi
+    fi
+  }
+
   if [[ -f "$PID_FILE" ]]; then
     OLD_PID="$(cat "$PID_FILE" 2>/dev/null || true)"
-    if [[ -n "$OLD_PID" ]] && kill -0 "$OLD_PID" 2>/dev/null; then
-      echo "Gateway already running with PID ${OLD_PID} (pid file: ${PID_FILE})"
-      exit 1
-    fi
+    stop_existing "$OLD_PID"
     rm -f "$PID_FILE"
+  fi
+
+  # Fallback: stop stale process started without pid file.
+  EXISTING_PIDS="$(pgrep -f "${BIN_PATH} run" || true)"
+  if [[ -n "$EXISTING_PIDS" ]]; then
+    for pid in $EXISTING_PIDS; do
+      stop_existing "$pid"
+    done
   fi
 
   nohup "$BIN_PATH" "${RUN_ARGS[@]}" >>"$LOG_FILE" 2>&1 &
