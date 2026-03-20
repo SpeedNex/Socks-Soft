@@ -77,6 +77,30 @@ fi
 BIN_PATH="${INSTALL_DIR}/socks-proxy"
 CONFIG_PATH="${INSTALL_DIR}/agent.config.json"
 
+extract_installed_version() {
+  local bin="$1"
+  if [[ ! -f "$bin" ]]; then
+    return 0
+  fi
+
+  local version=""
+  local build_time=""
+
+  if command -v strings >/dev/null 2>&1; then
+    version="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+\+[0-9]{14}-[0-9]+' | head -n 1 || true)"
+    build_time="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z' | head -n 1 || true)"
+  fi
+
+  if [[ -n "$version" ]]; then
+    echo "Installed agent version: ${version}"
+  else
+    echo "Installed agent version: unknown"
+  fi
+  if [[ -n "$build_time" ]]; then
+    echo "Installed agent build_time_utc: ${build_time}"
+  fi
+}
+
 echo "Downloading agent from: $BIN_URL"
 TMP_BIN="$(mktemp "${TMPDIR:-/tmp}/socks-proxy.XXXXXX")"
 cleanup_tmp() {
@@ -99,6 +123,7 @@ else
   sudo mv "$TMP_BIN" "$BIN_PATH"
   sudo chmod +x "$BIN_PATH"
 fi
+extract_installed_version "$BIN_PATH"
 
 # Persist first-run/runtime parameters for future restarts and audits.
 python3 - "$CONFIG_PATH" "$AGENT_ID" "$AGENT_SECRET" "$SERVER" <<'PY'

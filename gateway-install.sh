@@ -97,9 +97,35 @@ fi
 
 BIN_PATH="${INSTALL_DIR}/socks-gateway"
 CONFIG_PATH="${INSTALL_DIR}/config.json"
+
+extract_installed_version() {
+  local bin="$1"
+  if [[ ! -f "$bin" ]]; then
+    return 0
+  fi
+
+  local version=""
+  local build_time=""
+
+  if command -v strings >/dev/null 2>&1; then
+    version="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+\+[0-9]{14}-[0-9]+' | head -n 1 || true)"
+    build_time="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z' | head -n 1 || true)"
+  fi
+
+  if [[ -n "$version" ]]; then
+    echo "Installed gateway version: ${version}"
+  else
+    echo "Installed gateway version: unknown"
+  fi
+  if [[ -n "$build_time" ]]; then
+    echo "Installed gateway build_time_utc: ${build_time}"
+  fi
+}
+
 echo "Downloading gateway from: $BIN_URL"
 curl -fsSL "$BIN_URL" -o "$BIN_PATH"
 chmod +x "$BIN_PATH"
+extract_installed_version "$BIN_PATH"
 
 # Keep config.json in sync with startup parameters.
 python3 - "$CONFIG_PATH" "$GATEWAY_ID" "$SECRET" "$REDIS" "$LISTEN_API" "$LISTEN_ENTRY" "$LISTEN_QUIC" "$LISTEN_SOCKS" "$ADVERTISE_QUIC_PORT" <<'PY'
