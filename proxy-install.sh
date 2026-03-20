@@ -91,7 +91,10 @@ extract_installed_version() {
     if [[ -z "$version" ]]; then
       version="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]+\.[0-9]+\.[0-9]+(-dev)?' | head -n 1 || true)"
     fi
-    build_time="$(strings "$bin" 2>/dev/null | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z' | head -n 1 || true)"
+    build_time="$(strings "$bin" 2>/dev/null \
+      | grep -Eo '[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}Z' \
+      | grep -v '^2006-01-02T15:04:05Z$' \
+      | head -n 1 || true)"
   fi
   if command -v go >/dev/null 2>&1; then
     if [[ -z "$build_time" ]]; then
