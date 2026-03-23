@@ -323,7 +323,9 @@ fi
 if [[ -n "$ADVERTISE_QUIC_PORT" ]]; then
   RUN_ARGS+=(--advertise-quic-port "$ADVERTISE_QUIC_PORT")
 fi
-RUN_ARGS+=("${EXTRA_ARGS[@]}")
+if [[ ${#EXTRA_ARGS[@]:-0} -gt 0 ]]; then
+  RUN_ARGS+=("${EXTRA_ARGS[@]}")
+fi
 
 if [[ "$DAEMON_MODE" == "true" ]]; then
   if [[ -z "$PID_FILE" ]]; then
