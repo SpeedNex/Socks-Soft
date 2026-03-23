@@ -202,7 +202,7 @@ else
   echo "Starting agent in foreground..."
 fi
 RUN_ARGS=(run --web-server-url "$SERVER" --agent-id "$AGENT_ID" --secret "$AGENT_SECRET")
-if [[ ${#EXTRA_ARGS[@]:-0} -gt 0 ]]; then
+if [[ ${#EXTRA_ARGS[@]} -gt 0 ]]; then
   RUN_ARGS+=("${EXTRA_ARGS[@]}")
 fi
 

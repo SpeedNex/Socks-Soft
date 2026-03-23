@@ -323,7 +323,7 @@ fi
 if [[ -n "$ADVERTISE_QUIC_PORT" ]]; then
   RUN_ARGS+=(--advertise-quic-port "$ADVERTISE_QUIC_PORT")
 fi
-if [[ ${#EXTRA_ARGS[@]:-0} -gt 0 ]]; then
+if [[ ${#EXTRA_ARGS[@]} -gt 0 ]]; then
   RUN_ARGS+=("${EXTRA_ARGS[@]}")
 fi
 
