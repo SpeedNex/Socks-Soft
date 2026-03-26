@@ -1,0 +1,184 @@
+[2026/03/24 02:04:16] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/24 02:04:16] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/24 02:04:16] startup result: web=[failed] gateway=[pending] snapshot=[pending] -> one or more checks failed
+[2026/03/24 02:04:16] retrying bootstrap in 1s
+[2026/03/24 02:04:17] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/24 02:04:17] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/24 02:04:17] startup result: web=[failed] gateway=[pending] snapshot=[pending] -> one or more checks failed
+[2026/03/24 02:04:17] retrying bootstrap in 2s
+[2026/03/24 02:04:19] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/24 02:04:19] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/24 02:04:19] startup result: web=[failed] gateway=[pending] snapshot=[pending] -> one or more checks failed
+[2026/03/24 02:04:19] retrying bootstrap in 4s
+[2026/03/24 02:04:23] health check request: GET http://127.0.0.1:8001/healthz
+[2026/03/24 02:04:23] connecting to web server: http://127.0.0.1:8001 [failed] (health check failed (GET http://127.0.0.1:8001/healthz): Get "http://127.0.0.1:8001/healthz": dial tcp 127.0.0.1:8001: connect: connection refused)
+[2026/03/24 02:04:23] startup result: web=[failed] gateway=[pending] snapshot=[pending] -> one or more checks failed
+[2026/03/24 02:04:23] retrying bootstrap in 8s
+[2026/03/24 02:10:02] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:02] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:02] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:02] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:02] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:02] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:02] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:02] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:02] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:02] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:02] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:02] retrying gateway connect in 1s
+[2026/03/24 02:10:04] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:04] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:04] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:04] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:04] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:04] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:04] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:04] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:04] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:04] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:04] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:04] retrying gateway connect in 1s
+[2026/03/24 02:10:05] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:05] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:05] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:05] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:05] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:05] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:05] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:05] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:05] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:05] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:05] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:05] retrying gateway connect in 1s
+[2026/03/24 02:10:06] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:06] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:06] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:06] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:06] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:06] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:06] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:06] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:06] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:06] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:06] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:06] retrying gateway connect in 1s
+[2026/03/24 02:10:08] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:08] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:08] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:08] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:08] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:08] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:08] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:08] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:08] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:08] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:08] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:08] retrying gateway connect in 1s
+[2026/03/24 02:10:09] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:09] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:09] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:09] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:09] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:09] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:09] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:09] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:09] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:09] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:09] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:09] retrying gateway connect in 1s
+[2026/03/24 02:10:10] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:10] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:10] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:10] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:10] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:10] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:10] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:10] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:10] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:10] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:10] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:10] retrying gateway connect in 1s
+[2026/03/24 02:10:11] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:11] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:11] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:11] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:11] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:11] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:11] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:11] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:11] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:11] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:11] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:11] retrying gateway connect in 1s
+[2026/03/24 02:10:13] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:13] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:13] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:13] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:13] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:13] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:13] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:13] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:13] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:13] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:13] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:13] retrying gateway connect in 1s
+[2026/03/24 02:10:14] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:14] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:14] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:14] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:14] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:14] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:14] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:14] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:14] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:14] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:14] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:14] retrying gateway connect in 1s
+[2026/03/24 02:10:15] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:15] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:15] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:15] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:15] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:15] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:15] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:15] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:15] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:15] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:15] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:15] retrying gateway connect in 1s
+[2026/03/24 02:10:16] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:16] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:16] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:16] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:16] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:16] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:16] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:16] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:16] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:16] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:16] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:16] retrying gateway connect in 1s
+[2026/03/24 02:10:18] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:18] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:18] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:18] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:18] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:18] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:18] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:18] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:18] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:18] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:18] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:18] retrying gateway connect in 1s
+[2026/03/24 02:10:19] connecting to web server: http://127.0.0.1:8001 [success]
+[2026/03/24 02:10:19] control path binding enabled: control_ip=192.168.88.164 control_nic=ens18
+[2026/03/24 02:10:19] connecting to gateway server: 103.86.44.209:10443 [dialing]
+[2026/03/24 02:10:19] connecting to gateway server: 103.86.44.209:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:19] trying next gateway endpoint: 103.86.44.210:10443
+[2026/03/24 02:10:19] connecting to gateway server: 103.86.44.210:10443 [dialing]
+[2026/03/24 02:10:19] connecting to gateway server: 103.86.44.210:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:19] trying next gateway endpoint: 103.86.44.211:10443
+[2026/03/24 02:10:19] connecting to gateway server: 103.86.44.211:10443 [dialing]
+[2026/03/24 02:10:19] connecting to gateway server: 103.86.44.211:10443 [failed] (connect failed: open udp control socket failed: listen udp 192.168.88.164:0: SO_BINDTODEVICE(ens18) failed: no such device)
+[2026/03/24 02:10:19] startup result: web=[success] gateway=[failed] snapshot=[failed] -> one or more checks failed
+[2026/03/24 02:10:19] retrying gateway connect in 1s
