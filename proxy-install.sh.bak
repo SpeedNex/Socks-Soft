@@ -77,30 +77,6 @@ fi
 BIN_PATH="${INSTALL_DIR}/socks-proxy"
 CONFIG_PATH="${INSTALL_DIR}/agent.config.json"
 
-require_manual_stop_if_running() {
-  local found_pid=""
-  if [[ -n "${PID_FILE:-}" && -f "$PID_FILE" ]]; then
-    local pid_from_file
-    pid_from_file="$(cat "$PID_FILE" 2>/dev/null || true)"
-    if [[ -n "$pid_from_file" ]] && kill -0 "$pid_from_file" 2>/dev/null; then
-      found_pid="$pid_from_file"
-    fi
-  fi
-
-  if [[ -z "$found_pid" ]]; then
-    found_pid="$(pgrep -f "${BIN_PATH} run" | head -n 1 || true)"
-  fi
-
-  if [[ -n "$found_pid" ]]; then
-    echo "检测到代理已在运行 (PID: ${found_pid})。"
-    echo "为避免重复运行/覆盖，请先手动停止代理后再执行安装脚本。"
-    echo "示例: kill ${found_pid}"
-    exit 1
-  fi
-}
-
-require_manual_stop_if_running
-
 extract_installed_version() {
   local bin="$1"
   if [[ ! -f "$bin" ]]; then
@@ -239,6 +215,34 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
   fi
 
   mkdir -p "$(dirname "$PID_FILE")" "$(dirname "$LOG_FILE")"
+  stop_existing() {
+    local pid="$1"
+    if [[ -z "$pid" ]]; then
+      return 0
+    fi
+    if kill -0 "$pid" 2>/dev/null; then
+      echo "Stopping existing agent process: PID ${pid}"
+      kill "$pid" 2>/dev/null || true
+      sleep 1
+      if kill -0 "$pid" 2>/dev/null; then
+        kill -9 "$pid" 2>/dev/null || true
+      fi
+    fi
+  }
+
+  if [[ -f "$PID_FILE" ]]; then
+    OLD_PID="$(cat "$PID_FILE" 2>/dev/null || true)"
+    stop_existing "$OLD_PID"
+    rm -f "$PID_FILE"
+  fi
+
+  # Fallback: stop stale process started without pid file.
+  EXISTING_PIDS="$(pgrep -f "${BIN_PATH} run" || true)"
+  if [[ -n "$EXISTING_PIDS" ]]; then
+    for pid in $EXISTING_PIDS; do
+      stop_existing "$pid"
+    done
+  fi
 
   if [[ "$OS" == "darwin" ]] && command -v caffeinate >/dev/null 2>&1; then
     # Keep system awake while the agent process is running.
