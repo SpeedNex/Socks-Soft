@@ -138,6 +138,7 @@ install_systemd_service() {
   work_dir="$(dirname "$BIN_PATH")"
   local exec_start
   exec_start="$(build_execstart_line)"
+  local log_file="${work_dir}/agent.log"
 
   cat >"$unit_path" <<EOF
 [Unit]
@@ -158,12 +159,32 @@ WantedBy=multi-user.target
 EOF
 
   systemctl daemon-reload
-  systemctl enable --now "$SERVICE_NAME"
+  if ! systemctl enable --now "$SERVICE_NAME"; then
+    echo "Agent installation failed: systemd service could not be started."
+    echo "Service: ${SERVICE_NAME}"
+    echo "Check status: systemctl status ${SERVICE_NAME}"
+    echo "View logs: journalctl -u ${SERVICE_NAME} -n 50 --no-pager"
+    exit 1
+  fi
 
-  echo "Agent installed as systemd service."
+  sleep 1
+  if systemctl is-active --quiet "$SERVICE_NAME"; then
+    echo "Agent installation successful."
+    echo "Service: ${SERVICE_NAME}"
+    echo "Status: running"
+    echo "Check status: systemctl status ${SERVICE_NAME}"
+    echo "View logs (journal): journalctl -u ${SERVICE_NAME} -f"
+    echo "File logs (if enabled): ${log_file}"
+    echo "Config: ${CONFIG_PATH}"
+    return 0
+  fi
+
+  echo "Agent installation failed: service is not running after startup."
   echo "Service: ${SERVICE_NAME}"
   echo "Check status: systemctl status ${SERVICE_NAME}"
-  echo "View logs: journalctl -u ${SERVICE_NAME} -f"
+  echo "View logs: journalctl -u ${SERVICE_NAME} -n 50 --no-pager"
+  echo "File logs (if enabled): ${log_file}"
+  exit 1
 }
 
 require_manual_stop_if_running() {
@@ -343,10 +364,12 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
   fi
   NEW_PID=$!
   echo "$NEW_PID" >"$PID_FILE"
+  echo "Agent installation successful."
   echo "Agent started in background."
   echo "PID: ${NEW_PID}"
   echo "PID file: ${PID_FILE}"
   echo "Log file: ${LOG_FILE}"
+  echo "Config: ${CONFIG_PATH}"
   exit 0
 fi
 
