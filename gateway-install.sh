@@ -164,7 +164,7 @@ install_systemd_service() {
   local exec_start
   exec_start="$(build_execstart_line)"
   local log_dir="${work_dir}/logs"
-  local log_file="${log_dir}/proxy-gateway-$(date +%F).log"
+  local log_file="${log_dir}/gateway.log"
 
   cat >"$unit_path" <<EOF
 [Unit]
@@ -406,7 +406,7 @@ default_cfg = {
     "log": {
         "level": "info",
         "output": "both",
-        "file_path": "logs/proxy-gateway-{date}.log",
+        "file_path": "logs/gateway.log",
         "max_size": 100,
         "max_backups": 7,
         "max_age": 30,
