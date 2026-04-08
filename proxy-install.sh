@@ -10,6 +10,7 @@ BASE_URL="https://raw.githubusercontent.com/SpeedNex/Socks-Soft/main/proxy"
 DAEMON_MODE="true"
 PID_FILE=""
 LOG_FILE=""
+SERVICE_NAME=""
 EXTRA_ARGS=()
 
 while [[ $# -gt 0 ]]; do
@@ -28,8 +29,10 @@ while [[ $# -gt 0 ]]; do
     --foreground) DAEMON_MODE="false"; shift ;;
     --pid-file=*) PID_FILE="${1#*=}"; shift ;;
     --log-file=*) LOG_FILE="${1#*=}"; shift ;;
+    --service-name=*) SERVICE_NAME="${1#*=}"; shift ;;
     --pid-file) PID_FILE="${2:-}"; shift 2 ;;
     --log-file) LOG_FILE="${2:-}"; shift 2 ;;
+    --service-name) SERVICE_NAME="${2:-}"; shift 2 ;;
     --) shift; EXTRA_ARGS+=("$@"); break ;;
     *) echo "Unknown arg: $1"; exit 1 ;;
   esac
@@ -76,6 +79,92 @@ fi
 
 BIN_PATH="${INSTALL_DIR}/socks-proxy"
 CONFIG_PATH="${INSTALL_DIR}/agent.config.json"
+
+sanitize_service_name() {
+  local raw="$1"
+  raw="${raw//[^a-zA-Z0-9_.@-]/-}"
+  raw="${raw#-}"
+  raw="${raw%-}"
+  if [[ -z "$raw" ]]; then
+    raw="default"
+  fi
+  printf '%s' "$raw"
+}
+
+ensure_service_name() {
+  if [[ -n "$SERVICE_NAME" ]]; then
+    SERVICE_NAME="$(sanitize_service_name "$SERVICE_NAME")"
+  else
+    SERVICE_NAME="socks-proxy-$(sanitize_service_name "$AGENT_ID")"
+  fi
+  if [[ "$SERVICE_NAME" != *.service ]]; then
+    SERVICE_NAME="${SERVICE_NAME}.service"
+  fi
+}
+
+systemd_available() {
+  [[ "$OS" == "linux" ]] && command -v systemctl >/dev/null 2>&1 && [[ -d /etc/systemd/system ]]
+}
+
+systemd_escape_arg() {
+  local value="$1"
+  value="${value//\\/\\\\}"
+  value="${value//\"/\\\"}"
+  printf '"%s"' "$value"
+}
+
+build_execstart_line() {
+  local args=("$BIN_PATH" "${RUN_ARGS[@]}")
+  local parts=()
+  local arg=""
+  for arg in "${args[@]}"; do
+    parts+=("$(systemd_escape_arg "$arg")")
+  done
+  local joined=""
+  local part=""
+  for part in "${parts[@]}"; do
+    if [[ -n "$joined" ]]; then
+      joined+=" "
+    fi
+    joined+="$part"
+  done
+  printf '%s' "$joined"
+}
+
+install_systemd_service() {
+  ensure_service_name
+  local unit_path="/etc/systemd/system/${SERVICE_NAME}"
+  local work_dir
+  work_dir="$(dirname "$BIN_PATH")"
+  local exec_start
+  exec_start="$(build_execstart_line)"
+
+  cat >"$unit_path" <<EOF
+[Unit]
+Description=Socks Proxy ${AGENT_ID}
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=${work_dir}
+ExecStart=${exec_start}
+Restart=always
+RestartSec=5
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+  systemctl daemon-reload
+  systemctl enable --now "$SERVICE_NAME"
+
+  echo "Agent installed as systemd service."
+  echo "Service: ${SERVICE_NAME}"
+  echo "Check status: systemctl status ${SERVICE_NAME}"
+  echo "View logs: journalctl -u ${SERVICE_NAME} -f"
+}
 
 require_manual_stop_if_running() {
   local found_pid=""
@@ -231,6 +320,11 @@ if [[ ${#EXTRA_ARGS[@]} -gt 0 ]]; then
 fi
 
 if [[ "$DAEMON_MODE" == "true" ]]; then
+  if systemd_available; then
+    install_systemd_service
+    exit 0
+  fi
+
   if [[ -z "$PID_FILE" ]]; then
     PID_FILE="${INSTALL_DIR}/agent.pid"
   fi
@@ -240,6 +334,7 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
 
   mkdir -p "$(dirname "$PID_FILE")" "$(dirname "$LOG_FILE")"
 
+  echo "systemd not available; falling back to nohup background mode."
   if [[ "$OS" == "darwin" ]] && command -v caffeinate >/dev/null 2>&1; then
     # Keep system awake while the agent process is running.
     nohup caffeinate -dimsu "$BIN_PATH" "${RUN_ARGS[@]}" >>"$LOG_FILE" 2>&1 &

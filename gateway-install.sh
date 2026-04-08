@@ -15,6 +15,7 @@ LISTEN_ENTRY=""
 LISTEN_QUIC=""
 LISTEN_SOCKS=""
 ADVERTISE_QUIC_PORT=""
+SERVICE_NAME=""
 EXTRA_ARGS=()
 
 while [[ $# -gt 0 ]]; do
@@ -36,6 +37,7 @@ while [[ $# -gt 0 ]]; do
     --listen-quic=*) LISTEN_QUIC="${1#*=}"; shift ;;
     --listen-socks=*) LISTEN_SOCKS="${1#*=}"; shift ;;
     --advertise-quic-port=*) ADVERTISE_QUIC_PORT="${1#*=}"; shift ;;
+    --service-name=*) SERVICE_NAME="${1#*=}"; shift ;;
     --pid-file) PID_FILE="${2:-}"; shift 2 ;;
     --log-file) LOG_FILE="${2:-}"; shift 2 ;;
     --listen-api) LISTEN_API="${2:-}"; shift 2 ;;
@@ -43,6 +45,7 @@ while [[ $# -gt 0 ]]; do
     --listen-quic) LISTEN_QUIC="${2:-}"; shift 2 ;;
     --listen-socks) LISTEN_SOCKS="${2:-}"; shift 2 ;;
     --advertise-quic-port) ADVERTISE_QUIC_PORT="${2:-}"; shift 2 ;;
+    --service-name) SERVICE_NAME="${2:-}"; shift 2 ;;
     --) shift; EXTRA_ARGS+=("$@"); break ;;
     *) echo "Unknown arg: $1"; exit 1 ;;
   esac
@@ -97,6 +100,92 @@ fi
 
 BIN_PATH="${INSTALL_DIR}/socks-gateway"
 CONFIG_PATH="${INSTALL_DIR}/config.json"
+
+sanitize_service_name() {
+  local raw="$1"
+  raw="${raw//[^a-zA-Z0-9_.@-]/-}"
+  raw="${raw#-}"
+  raw="${raw%-}"
+  if [[ -z "$raw" ]]; then
+    raw="default"
+  fi
+  printf '%s' "$raw"
+}
+
+ensure_service_name() {
+  if [[ -n "$SERVICE_NAME" ]]; then
+    SERVICE_NAME="$(sanitize_service_name "$SERVICE_NAME")"
+  else
+    SERVICE_NAME="socks-gateway-$(sanitize_service_name "$GATEWAY_ID")"
+  fi
+  if [[ "$SERVICE_NAME" != *.service ]]; then
+    SERVICE_NAME="${SERVICE_NAME}.service"
+  fi
+}
+
+systemd_available() {
+  [[ "$OS" == "linux" ]] && command -v systemctl >/dev/null 2>&1 && [[ -d /etc/systemd/system ]]
+}
+
+systemd_escape_arg() {
+  local value="$1"
+  value="${value//\\/\\\\}"
+  value="${value//\"/\\\"}"
+  printf '"%s"' "$value"
+}
+
+build_execstart_line() {
+  local args=("$BIN_PATH" "${RUN_ARGS[@]}")
+  local parts=()
+  local arg=""
+  for arg in "${args[@]}"; do
+    parts+=("$(systemd_escape_arg "$arg")")
+  done
+  local joined=""
+  local part=""
+  for part in "${parts[@]}"; do
+    if [[ -n "$joined" ]]; then
+      joined+=" "
+    fi
+    joined+="$part"
+  done
+  printf '%s' "$joined"
+}
+
+install_systemd_service() {
+  ensure_service_name
+  local unit_path="/etc/systemd/system/${SERVICE_NAME}"
+  local work_dir
+  work_dir="$(dirname "$BIN_PATH")"
+  local exec_start
+  exec_start="$(build_execstart_line)"
+
+  cat >"$unit_path" <<EOF
+[Unit]
+Description=Socks Gateway ${GATEWAY_ID}
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=${work_dir}
+ExecStart=${exec_start}
+Restart=always
+RestartSec=5
+LimitNOFILE=1048576
+
+[Install]
+WantedBy=multi-user.target
+EOF
+
+  systemctl daemon-reload
+  systemctl enable --now "$SERVICE_NAME"
+
+  echo "Gateway installed as systemd service."
+  echo "Service: ${SERVICE_NAME}"
+  echo "Check status: systemctl status ${SERVICE_NAME}"
+  echo "View logs: journalctl -u ${SERVICE_NAME} -f"
+}
 
 require_manual_stop_if_running() {
   local found_pid=""
@@ -219,15 +308,49 @@ def parse_addr(raw: str):
     return value, None
 
 def parse_redis(raw: str):
+    from urllib.parse import urlparse
+
     value = (raw or "").strip()
+    host = "127.0.0.1"
+    port = 6379
+    password = ""
+    db = 0
+
+    if not value:
+        return host, port, password, db
+
     if "://" in value:
-        value = value.split("://", 1)[1]
-    host, port = parse_addr(value)
-    if not host:
-        host = "127.0.0.1"
-    if not isinstance(port, int) or port <= 0:
-        port = 6379
-    return host, port
+        parsed = urlparse(value)
+        if parsed.hostname:
+            host = parsed.hostname
+        if parsed.port:
+            port = parsed.port
+        if parsed.password:
+            password = parsed.password
+        path = (parsed.path or "").strip("/")
+        if path.isdigit():
+            db = int(path)
+        return host, port, password, db
+
+    normalized = value
+    if "@" in normalized:
+        auth_part, normalized = normalized.rsplit("@", 1)
+        if ":" in auth_part:
+            password = auth_part.split(":", 1)[1]
+        else:
+            password = auth_part
+
+    if "/" in normalized:
+        normalized, db_part = normalized.split("/", 1)
+        if db_part.isdigit():
+            db = int(db_part)
+
+    host, port_candidate = parse_addr(normalized)
+    if host:
+        host = host
+    if isinstance(port_candidate, int) and port_candidate > 0:
+        port = port_candidate
+    return host, port, password, db
 
 default_cfg = {
     "api": {"host": "0.0.0.0", "port": 10080},
@@ -287,9 +410,11 @@ cfg.setdefault("cluster", {})
 cfg["cluster"]["gateway_id"] = gateway_id
 cfg["web"]["gateway_secret"] = secret
 
-redis_host, redis_port = parse_redis(redis_raw)
+redis_host, redis_port, redis_password, redis_db = parse_redis(redis_raw)
 cfg["redis"]["host"] = redis_host
 cfg["redis"]["port"] = redis_port
+cfg["redis"]["password"] = redis_password
+cfg["redis"]["db"] = redis_db
 
 api_host, api_port = parse_addr(listen_api)
 if isinstance(api_port, int) and api_port > 0:
@@ -352,6 +477,11 @@ if [[ ${#EXTRA_ARGS[@]} -gt 0 ]]; then
 fi
 
 if [[ "$DAEMON_MODE" == "true" ]]; then
+  if systemd_available; then
+    install_systemd_service
+    exit 0
+  fi
+
   if [[ -z "$PID_FILE" ]]; then
     PID_FILE="${INSTALL_DIR}/gateway.pid"
   fi
@@ -361,6 +491,7 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
 
   mkdir -p "$(dirname "$PID_FILE")" "$(dirname "$LOG_FILE")"
 
+  echo "systemd not available; falling back to nohup background mode."
   nohup "$BIN_PATH" "${RUN_ARGS[@]}" >>"$LOG_FILE" 2>&1 &
   NEW_PID=$!
   sleep 1
