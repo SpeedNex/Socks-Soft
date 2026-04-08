@@ -47,7 +47,7 @@
   "log": {
     "level": "info",
     "output": "both",
-    "file_path": "logs/gateway.log",
+    "file_path": "gateway.log",
     "max_size": 100,
     "max_backups": 7,
     "max_age": 30,

@@ -163,8 +163,7 @@ install_systemd_service() {
   work_dir="$(dirname "$BIN_PATH")"
   local exec_start
   exec_start="$(build_execstart_line)"
-  local log_dir="${work_dir}/logs"
-  local log_file="${log_dir}/gateway.log"
+  local log_file="${work_dir}/gateway.log"
 
   cat >"$unit_path" <<EOF
 [Unit]
@@ -406,7 +405,7 @@ default_cfg = {
     "log": {
         "level": "info",
         "output": "both",
-        "file_path": "logs/gateway.log",
+        "file_path": "gateway.log",
         "max_size": 100,
         "max_backups": 7,
         "max_age": 30,
