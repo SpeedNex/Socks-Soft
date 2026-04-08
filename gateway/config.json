@@ -31,7 +31,7 @@
     "port": 6379,
     "password": "",
     "db": 0,
-    "prefix": "socks:"
+    "prefix": ""
   },
   "cluster": {
         "gateway_id": "gw-\u003cdb-id\u003e-\u003crand\u003e",

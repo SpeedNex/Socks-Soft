@@ -306,10 +306,15 @@ curl -fsSL "$BIN_URL" -o "$BIN_PATH"
 chmod +x "$BIN_PATH"
 extract_installed_version "$BIN_PATH"
 
-# Keep config.json in sync with startup parameters.
+# Always recreate config.json from current install parameters.
+if [[ -f "$CONFIG_PATH" ]]; then
+  rm -f "$CONFIG_PATH"
+  echo "Removed old config: $CONFIG_PATH"
+fi
+
+# Rebuild config.json from defaults + startup parameters.
 python3 - "$CONFIG_PATH" "$GATEWAY_ID" "$SECRET" "$REDIS" "$LISTEN_API" "$LISTEN_ENTRY" "$LISTEN_QUIC" "$LISTEN_SOCKS" "$ADVERTISE_QUIC_PORT" <<'PY'
 import json
-import os
 import sys
 
 config_path, gateway_id, secret, redis_raw, listen_api, listen_entry, listen_quic, listen_socks, adv_quic = sys.argv[1:]
@@ -390,7 +395,7 @@ default_cfg = {
         "poll_interval_seconds": 30,
         "timeout_seconds": 5,
     },
-    "redis": {"host": "127.0.0.1", "port": 6379, "password": "", "db": 0, "prefix": "socks:"},
+    "redis": {"host": "127.0.0.1", "port": 6379, "password": "", "db": 0, "prefix": ""},
     "cluster": {
         "gateway_id": "gateway-0001",
         "advertise_host": "127.0.0.1",
@@ -414,14 +419,6 @@ default_cfg = {
 }
 
 cfg = default_cfg
-if os.path.exists(config_path):
-    try:
-        with open(config_path, "r", encoding="utf-8") as f:
-            loaded = json.load(f)
-            if isinstance(loaded, dict):
-                cfg = loaded
-    except Exception:
-        pass
 
 cfg.setdefault("api", {})
 cfg.setdefault("quic", {})
