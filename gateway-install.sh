@@ -18,6 +18,10 @@ ADVERTISE_QUIC_PORT=""
 SERVICE_NAME=""
 EXTRA_ARGS=()
 
+COLOR_GREEN="$(printf '\033[32m')"
+COLOR_RED="$(printf '\033[31m')"
+COLOR_RESET="$(printf '\033[0m')"
+
 while [[ $# -gt 0 ]]; do
   case "$1" in
     --gateway-id=*) GATEWAY_ID="${1#*=}"; shift ;;
@@ -159,6 +163,8 @@ install_systemd_service() {
   work_dir="$(dirname "$BIN_PATH")"
   local exec_start
   exec_start="$(build_execstart_line)"
+  local log_dir="${work_dir}/logs"
+  local log_file="${log_dir}/proxy-gateway-$(date +%F).log"
 
   cat >"$unit_path" <<EOF
 [Unit]
@@ -179,12 +185,31 @@ WantedBy=multi-user.target
 EOF
 
   systemctl daemon-reload
-  systemctl enable --now "$SERVICE_NAME"
+  if ! systemctl enable --now "$SERVICE_NAME"; then
+    echo "Gateway installation failed: systemd service could not be started."
+    echo "Service: ${SERVICE_NAME}"
+    echo "Check status: systemctl status ${SERVICE_NAME}"
+    echo "View logs: journalctl -u ${SERVICE_NAME} -n 50 --no-pager"
+    exit 1
+  fi
 
-  echo "Gateway installed as systemd service."
+  sleep 1
+  if systemctl is-active --quiet "$SERVICE_NAME"; then
+    echo "${COLOR_GREEN}Gateway installation successful.${COLOR_RESET}"
+    echo "Service: ${SERVICE_NAME}"
+    echo "Status: running"
+    echo "Check status: systemctl status ${SERVICE_NAME}"
+    echo "View journal logs: journalctl -u ${SERVICE_NAME} -f"
+    echo "File logs: ${log_file}"
+    return 0
+  fi
+
+  echo "Gateway installation failed: service is not running after startup."
   echo "Service: ${SERVICE_NAME}"
   echo "Check status: systemctl status ${SERVICE_NAME}"
-  echo "View logs: journalctl -u ${SERVICE_NAME} -f"
+  echo "View journal logs: journalctl -u ${SERVICE_NAME} -n 50 --no-pager"
+  echo "File logs: ${log_file}"
+  exit 1
 }
 
 require_manual_stop_if_running() {
