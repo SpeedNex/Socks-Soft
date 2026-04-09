@@ -302,26 +302,21 @@ else
 fi
 extract_installed_version "$BIN_PATH"
 
-# Persist first-run/runtime parameters for future restarts and audits.
+# Remove stale local config so re-install always uses the latest args.
+rm -f "$CONFIG_PATH"
+
+# Persist runtime parameters for restarts and audits.
 python3 - "$CONFIG_PATH" "$AGENT_ID" "$AGENT_SECRET" "$SERVER" <<'PY'
 import json
-import os
 import sys
 
 config_path, agent_id, secret, server = sys.argv[1:]
-cfg = {}
-if os.path.exists(config_path):
-    try:
-        with open(config_path, "r", encoding="utf-8") as f:
-            loaded = json.load(f)
-            if isinstance(loaded, dict):
-                cfg = loaded
-    except Exception:
-        cfg = {}
 
-cfg["agent_id"] = agent_id
-cfg["web_server_url"] = server
-cfg["agent_secret"] = secret
+cfg = {
+    "agent_id": agent_id,
+    "web_server_url": server,
+    "agent_secret": secret,
+}
 
 with open(config_path, "w", encoding="utf-8") as f:
     json.dump(cfg, f, ensure_ascii=False, indent=2)
