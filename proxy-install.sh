@@ -314,8 +314,8 @@ config_path, agent_id, secret, server = sys.argv[1:]
 
 cfg = {
     "agent_id": agent_id,
-    "web_server_url": server,
     "agent_secret": secret,
+    "web_server_url": server,
 }
 
 with open(config_path, "w", encoding="utf-8") as f:
@@ -330,7 +330,7 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
 else
   echo "Starting agent in foreground..."
 fi
-RUN_ARGS=(run --web-server-url "$SERVER" --agent-id "$AGENT_ID" --secret "$AGENT_SECRET")
+RUN_ARGS=(run --agent-id "$AGENT_ID" --secret "$AGENT_SECRET" --web-server-url "$SERVER")
 if [[ ${#EXTRA_ARGS[@]} -gt 0 ]]; then
   RUN_ARGS+=("${EXTRA_ARGS[@]}")
 fi

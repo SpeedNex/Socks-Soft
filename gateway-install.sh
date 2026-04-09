@@ -3,7 +3,7 @@ set -euo pipefail
 
 GATEWAY_ID=""
 SECRET=""
-REDIS="127.0.0.1:6379"
+SERVER=""
 INSTALL_DIR="/usr/local/bin"
 INSTALL_DIR_EXPLICIT="false"
 BASE_URL="https://github.com/SpeedNex/Socks-Soft/raw/main/gateway"
@@ -26,11 +26,11 @@ while [[ $# -gt 0 ]]; do
   case "$1" in
     --gateway-id=*) GATEWAY_ID="${1#*=}"; shift ;;
     --secret=*) SECRET="${1#*=}"; shift ;;
-    --redis=*) REDIS="${1#*=}"; shift ;;
+    --web-server-url=*) SERVER="${1#*=}"; shift ;;
     --install-dir=*) INSTALL_DIR="${1#*=}"; INSTALL_DIR_EXPLICIT="true"; shift ;;
     --gateway-id) GATEWAY_ID="${2:-}"; shift 2 ;;
     --secret) SECRET="${2:-}"; shift 2 ;;
-    --redis) REDIS="${2:-}"; shift 2 ;;
+    --web-server-url) SERVER="${2:-}"; shift 2 ;;
     --install-dir) INSTALL_DIR="${2:-}"; INSTALL_DIR_EXPLICIT="true"; shift 2 ;;
     --daemon) DAEMON_MODE="true"; shift ;;
     --foreground) DAEMON_MODE="false"; shift ;;
@@ -62,6 +62,11 @@ fi
 
 if [[ -z "$SECRET" ]]; then
   echo "Missing --secret"
+  exit 1
+fi
+
+if [[ -z "$SERVER" ]]; then
+  echo "Missing --web-server-url"
   exit 1
 fi
 
@@ -313,11 +318,11 @@ if [[ -f "$CONFIG_PATH" ]]; then
 fi
 
 # Rebuild config.json from defaults + startup parameters.
-python3 - "$CONFIG_PATH" "$GATEWAY_ID" "$SECRET" "$REDIS" "$LISTEN_API" "$LISTEN_ENTRY" "$LISTEN_QUIC" "$LISTEN_SOCKS" "$ADVERTISE_QUIC_PORT" <<'PY'
+python3 - "$CONFIG_PATH" "$GATEWAY_ID" "$SECRET" "$SERVER" "$LISTEN_API" "$LISTEN_ENTRY" "$LISTEN_QUIC" "$LISTEN_SOCKS" "$ADVERTISE_QUIC_PORT" <<'PY'
 import json
 import sys
 
-config_path, gateway_id, secret, redis_raw, listen_api, listen_entry, listen_quic, listen_socks, adv_quic = sys.argv[1:]
+config_path, gateway_id, secret, web_server_url, listen_api, listen_entry, listen_quic, listen_socks, adv_quic = sys.argv[1:]
 
 def parse_addr(raw: str):
     value = (raw or "").strip()
@@ -336,51 +341,6 @@ def parse_addr(raw: str):
             return host.strip() or "0.0.0.0", None
     return value, None
 
-def parse_redis(raw: str):
-    from urllib.parse import urlparse
-
-    value = (raw or "").strip()
-    host = "127.0.0.1"
-    port = 6379
-    password = ""
-    db = 0
-
-    if not value:
-        return host, port, password, db
-
-    if "://" in value:
-        parsed = urlparse(value)
-        if parsed.hostname:
-            host = parsed.hostname
-        if parsed.port:
-            port = parsed.port
-        if parsed.password:
-            password = parsed.password
-        path = (parsed.path or "").strip("/")
-        if path.isdigit():
-            db = int(path)
-        return host, port, password, db
-
-    normalized = value
-    if "@" in normalized:
-        auth_part, normalized = normalized.rsplit("@", 1)
-        if ":" in auth_part:
-            password = auth_part.split(":", 1)[1]
-        else:
-            password = auth_part
-
-    if "/" in normalized:
-        normalized, db_part = normalized.split("/", 1)
-        if db_part.isdigit():
-            db = int(db_part)
-
-    host, port_candidate = parse_addr(normalized)
-    if host:
-        host = host
-    if isinstance(port_candidate, int) and port_candidate > 0:
-        port = port_candidate
-    return host, port, password, db
-
 default_cfg = {
     "api": {"host": "0.0.0.0", "port": 10080},
     "quic": {"host": "0.0.0.0", "port": 10443, "cert_file": "", "key_file": ""},
@@ -388,14 +348,13 @@ default_cfg = {
     "socks": {"host": "0.0.0.0", "port": 13010, "allow_no_auth": False},
     "web": {
         "base_url": "https://web.example.com",
-        "snapshot_path": "/api/gateway/snapshot",
         "bootstrap_path": "/api/gateway/bootstrap",
         "gateway_secret": "",
         "token": "",
         "poll_interval_seconds": 30,
         "timeout_seconds": 5,
     },
-    "redis": {"host": "127.0.0.1", "port": 6379, "password": "", "db": 0, "prefix": ""},
+    "redis": {"host": "", "port": 0, "password": "", "db": 0, "prefix": ""},
     "cluster": {
         "gateway_id": "gateway-0001",
         "advertise_host": "127.0.0.1",
@@ -429,13 +388,13 @@ cfg.setdefault("redis", {})
 cfg.setdefault("cluster", {})
 
 cfg["cluster"]["gateway_id"] = gateway_id
+cfg["web"]["base_url"] = web_server_url.rstrip("/")
 cfg["web"]["gateway_secret"] = secret
-
-redis_host, redis_port, redis_password, redis_db = parse_redis(redis_raw)
-cfg["redis"]["host"] = redis_host
-cfg["redis"]["port"] = redis_port
-cfg["redis"]["password"] = redis_password
-cfg["redis"]["db"] = redis_db
+cfg["redis"]["host"] = ""
+cfg["redis"]["port"] = 0
+cfg["redis"]["password"] = ""
+cfg["redis"]["db"] = 0
+cfg["redis"]["prefix"] = ""
 
 api_host, api_port = parse_addr(listen_api)
 if isinstance(api_port, int) and api_port > 0:
@@ -472,12 +431,14 @@ with open(config_path, "w", encoding="utf-8") as f:
 print(f"Updated config: {config_path}")
 PY
 
+echo "Control plane: bootstrap via web once, runtime config/state via Redis"
+
 if [[ "$DAEMON_MODE" == "true" ]]; then
   echo "Starting gateway in background..."
 else
   echo "Starting gateway in foreground..."
 fi
-RUN_ARGS=(run --gateway-id "$GATEWAY_ID" --secret "$SECRET" --redis "$REDIS")
+RUN_ARGS=(run --gateway-id "$GATEWAY_ID" --secret "$SECRET")
 if [[ -n "$LISTEN_API" ]]; then
   RUN_ARGS+=(--listen-api "$LISTEN_API")
 fi
@@ -493,6 +454,7 @@ fi
 if [[ -n "$ADVERTISE_QUIC_PORT" ]]; then
   RUN_ARGS+=(--advertise-quic-port "$ADVERTISE_QUIC_PORT")
 fi
+RUN_ARGS+=(--web-server-url "$SERVER")
 if [[ ${#EXTRA_ARGS[@]} -gt 0 ]]; then
   RUN_ARGS+=("${EXTRA_ARGS[@]}")
 fi
