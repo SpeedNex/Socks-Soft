@@ -404,7 +404,7 @@ default_cfg = {
         "file_path": "logs/proxy-gateway-{date}.log",
         "max_size": 100,
         "max_backups": 7,
-        "max_age": 30,
+        "max_age": 7,
         "compress": True,
     },
 }
