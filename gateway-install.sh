@@ -193,7 +193,7 @@ install_systemd_service() {
   work_dir="$(dirname "$BIN_PATH")"
   local exec_start
   exec_start="$(build_execstart_line)"
-  local daily_log_file="${work_dir}/logs/proxy-gateway-\$(date +%F).log"
+  local daily_log_file="${work_dir}/logs/proxy-gateway-$(date +%F).log"
 
   cat >"$unit_path" <<EOF
 [Unit]
