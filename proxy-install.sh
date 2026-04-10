@@ -164,7 +164,7 @@ EOF
     echo "Agent installation failed: systemd service could not be started."
     echo "Service: ${SERVICE_NAME}"
     echo "Check status: systemctl status ${SERVICE_NAME}"
-    echo "View logs: journalctl -u ${SERVICE_NAME} -n 50 --no-pager"
+    echo "Tail file logs: tail -f ${log_file}"
     exit 1
   fi
 
@@ -174,8 +174,7 @@ EOF
     echo "Service: ${SERVICE_NAME}"
     echo "Status: running"
     echo "Check status: systemctl status ${SERVICE_NAME}"
-    echo "View logs (journal): journalctl -t ${SERVICE_NAME%.service} -f -o cat"
-    echo "File logs (if enabled): ${log_file}"
+    echo "Tail file logs: tail -f ${log_file}"
     echo "Config: ${CONFIG_PATH}"
     return 0
   fi
@@ -183,8 +182,7 @@ EOF
   echo "Agent installation failed: service is not running after startup."
   echo "Service: ${SERVICE_NAME}"
   echo "Check status: systemctl status ${SERVICE_NAME}"
-  echo "View logs: journalctl -u ${SERVICE_NAME} -n 50 --no-pager"
-  echo "File logs (if enabled): ${log_file}"
+  echo "Tail file logs: tail -f ${log_file}"
   exit 1
 }
 

@@ -193,7 +193,7 @@ install_systemd_service() {
   work_dir="$(dirname "$BIN_PATH")"
   local exec_start
   exec_start="$(build_execstart_line)"
-  local log_file="${work_dir}/gateway.log"
+  local daily_log_file="${work_dir}/logs/proxy-gateway-\$(date +%F).log"
 
   cat >"$unit_path" <<EOF
 [Unit]
@@ -222,7 +222,7 @@ EOF
     echo "Gateway installation failed: systemd service could not be started."
     echo "Service: ${SERVICE_NAME}"
     echo "Check status: systemctl status ${SERVICE_NAME}"
-    echo "View logs: journalctl -u ${SERVICE_NAME} -n 50 --no-pager"
+    echo "Tail file logs: tail -f ${daily_log_file}"
     exit 1
   fi
 
@@ -233,8 +233,7 @@ EOF
     echo "Service: ${SERVICE_NAME}"
     echo "Status: running"
     echo "Check status: systemctl status ${SERVICE_NAME}"
-    echo "View journal logs: journalctl -t ${SERVICE_NAME%.service} -f -o cat"
-    echo "File logs: ${log_file}"
+    echo "Tail file logs: tail -f ${daily_log_file}"
     return 0
   fi
 
@@ -243,8 +242,7 @@ EOF
   echo "Gateway installation failed: service is not running after startup."
   echo "Service: ${SERVICE_NAME}"
   echo "Check status: systemctl status ${SERVICE_NAME}"
-  echo "View journal logs: journalctl -u ${SERVICE_NAME} -n 50 --no-pager"
-  echo "File logs: ${log_file}"
+  echo "Tail file logs: tail -f ${daily_log_file}"
   exit 1
 }
 
@@ -401,7 +399,7 @@ default_cfg = {
     "log": {
         "level": "info",
         "output": "both",
-        "file_path": "gateway.log",
+        "file_path": "logs/proxy-gateway-{date}.log",
         "max_size": 100,
         "max_backups": 7,
         "max_age": 30,
@@ -501,7 +499,7 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
     PID_FILE="${INSTALL_DIR}/gateway.pid"
   fi
   if [[ -z "$LOG_FILE" ]]; then
-    LOG_FILE="${INSTALL_DIR}/gateway.log"
+    LOG_FILE="${INSTALL_DIR}/logs/proxy-gateway-$(date +%F).log"
   fi
 
   mkdir -p "$(dirname "$PID_FILE")" "$(dirname "$LOG_FILE")"
