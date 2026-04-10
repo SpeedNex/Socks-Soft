@@ -36,7 +36,7 @@ print_final_status() {
 show_raw_startup_logs_systemd() {
   local service_name="$1"
   echo "${COLOR_YELLOW}========== Gateway Raw Startup Logs (${service_name}) ==========${COLOR_RESET}"
-  journalctl -u "$service_name" -n 30 --no-pager || true
+  systemctl status "$service_name" --no-pager || true
   echo "${COLOR_YELLOW}===============================================================${COLOR_RESET}"
 }
 
