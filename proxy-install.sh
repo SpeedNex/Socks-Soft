@@ -149,6 +149,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=${work_dir}
+SyslogIdentifier=${SERVICE_NAME%.service}
 ExecStart=${exec_start}
 Restart=always
 RestartSec=5
@@ -173,7 +174,7 @@ EOF
     echo "Service: ${SERVICE_NAME}"
     echo "Status: running"
     echo "Check status: systemctl status ${SERVICE_NAME}"
-    echo "View logs (journal): journalctl -u ${SERVICE_NAME} -f"
+    echo "View logs (journal): journalctl -t ${SERVICE_NAME%.service} -f -o cat"
     echo "File logs (if enabled): ${log_file}"
     echo "Config: ${CONFIG_PATH}"
     return 0
