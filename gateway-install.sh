@@ -193,7 +193,9 @@ install_systemd_service() {
   work_dir="$(dirname "$BIN_PATH")"
   local exec_start
   exec_start="$(build_execstart_line)"
-  local daily_log_file="${work_dir}/logs/proxy-gateway-$(date +%F).log"
+  local today_date
+  today_date="$(date +%Y-%m-%d)"
+  local daily_log_file="${work_dir}/logs/proxy-gateway-${today_date}.log"
 
   cat >"$unit_path" <<EOF
 [Unit]
@@ -499,7 +501,7 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
     PID_FILE="${INSTALL_DIR}/gateway.pid"
   fi
   if [[ -z "$LOG_FILE" ]]; then
-    LOG_FILE="${INSTALL_DIR}/logs/proxy-gateway-$(date +%F).log"
+    LOG_FILE="${INSTALL_DIR}/logs/proxy-gateway-$(date +%Y-%m-%d).log"
   fi
 
   mkdir -p "$(dirname "$PID_FILE")" "$(dirname "$LOG_FILE")"
