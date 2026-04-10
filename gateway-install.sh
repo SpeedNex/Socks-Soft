@@ -265,7 +265,7 @@ require_manual_stop_if_running() {
   if [[ -n "$found_pid" ]]; then
     echo "检测到网关已在运行 (PID: ${found_pid})。"
     echo "为避免重复运行/覆盖，请先手动停止网关后再执行安装脚本。"
-    echo "示例: kill ${found_pid}"
+    echo "关闭正在运行的服务: systemctl stop ${SERVICE_NAME:-socks-gateway-${GATEWAY_ID}.service} && pkill -f '${BIN_PATH}' || true"
     exit 1
   fi
 }
