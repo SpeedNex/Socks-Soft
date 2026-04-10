@@ -20,7 +20,32 @@ EXTRA_ARGS=()
 
 COLOR_GREEN="$(printf '\033[32m')"
 COLOR_RED="$(printf '\033[31m')"
+COLOR_YELLOW="$(printf '\033[33m')"
 COLOR_RESET="$(printf '\033[0m')"
+
+print_final_status() {
+  local status="$1"
+  local message="$2"
+  if [[ "$status" == "success" ]]; then
+    echo "${COLOR_GREEN}[SUCCESS] ${message}${COLOR_RESET}"
+  else
+    echo "${COLOR_RED}[FAILED] ${message}${COLOR_RESET}"
+  fi
+}
+
+show_raw_startup_logs_systemd() {
+  local service_name="$1"
+  echo "${COLOR_YELLOW}========== Gateway Raw Startup Logs (${service_name}) ==========${COLOR_RESET}"
+  journalctl -u "$service_name" -n 30 --no-pager || true
+  echo "${COLOR_YELLOW}===============================================================${COLOR_RESET}"
+}
+
+show_raw_startup_logs_file() {
+  local log_file="$1"
+  echo "${COLOR_YELLOW}========== Gateway Raw Startup Logs (${log_file}) ==========${COLOR_RESET}"
+  tail -n 30 "$log_file" 2>/dev/null || true
+  echo "${COLOR_YELLOW}============================================================${COLOR_RESET}"
+}
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -180,7 +205,8 @@ Wants=network-online.target
 Type=simple
 WorkingDirectory=${work_dir}
 ExecStart=${exec_start}
-Restart=always
+Restart=on-failure
+RestartPreventExitStatus=42
 RestartSec=5
 LimitNOFILE=1048576
 
@@ -190,6 +216,8 @@ EOF
 
   systemctl daemon-reload
   if ! systemctl enable --now "$SERVICE_NAME"; then
+    show_raw_startup_logs_systemd "$SERVICE_NAME"
+    print_final_status "failed" "Gateway installation failed."
     echo "Gateway installation failed: systemd service could not be started."
     echo "Service: ${SERVICE_NAME}"
     echo "Check status: systemctl status ${SERVICE_NAME}"
@@ -199,7 +227,8 @@ EOF
 
   sleep 1
   if systemctl is-active --quiet "$SERVICE_NAME"; then
-    echo "${COLOR_GREEN}Gateway installation successful.${COLOR_RESET}"
+    show_raw_startup_logs_systemd "$SERVICE_NAME"
+    print_final_status "success" "Gateway installation successful."
     echo "Service: ${SERVICE_NAME}"
     echo "Status: running"
     echo "Check status: systemctl status ${SERVICE_NAME}"
@@ -208,6 +237,8 @@ EOF
     return 0
   fi
 
+  show_raw_startup_logs_systemd "$SERVICE_NAME"
+  print_final_status "failed" "Gateway installation failed."
   echo "Gateway installation failed: service is not running after startup."
   echo "Service: ${SERVICE_NAME}"
   echo "Check status: systemctl status ${SERVICE_NAME}"
@@ -479,10 +510,14 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
   NEW_PID=$!
   sleep 1
   if ! kill -0 "$NEW_PID" 2>/dev/null; then
+    show_raw_startup_logs_file "$LOG_FILE"
+    print_final_status "failed" "Gateway installation failed."
     echo "Gateway failed to stay running. Check log: ${LOG_FILE}"
     exit 1
   fi
   echo "$NEW_PID" >"$PID_FILE"
+  show_raw_startup_logs_file "$LOG_FILE"
+  print_final_status "success" "Gateway installation successful."
   echo "Gateway started in background."
   echo "PID: ${NEW_PID}"
   echo "PID file: ${PID_FILE}"
