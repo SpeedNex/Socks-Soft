@@ -138,7 +138,7 @@ install_systemd_service() {
   work_dir="$(dirname "$BIN_PATH")"
   local exec_start
   exec_start="$(build_execstart_line)"
-  local log_file="${work_dir}/agent.log"
+  local log_file="${work_dir}/logs/$(date +%Y-%m-%d).log"
 
   cat >"$unit_path" <<EOF
 [Unit]
@@ -203,7 +203,7 @@ require_manual_stop_if_running() {
   if [[ -n "$found_pid" ]]; then
     echo "检测到代理已在运行 (PID: ${found_pid})。"
     echo "为避免重复运行/覆盖，请先手动停止代理后再执行安装脚本。"
-    echo "示例: kill ${found_pid}"
+    echo "关闭正在运行的服务: systemctl stop ${SERVICE_NAME:-socks-proxy-${AGENT_ID}.service} && pkill -f '${BIN_PATH}' || true"
     exit 1
   fi
 }
@@ -344,7 +344,7 @@ if [[ "$DAEMON_MODE" == "true" ]]; then
     PID_FILE="${INSTALL_DIR}/agent.pid"
   fi
   if [[ -z "$LOG_FILE" ]]; then
-    LOG_FILE="${INSTALL_DIR}/agent.log"
+    LOG_FILE="${INSTALL_DIR}/logs/$(date +%Y-%m-%d).log"
   fi
 
   mkdir -p "$(dirname "$PID_FILE")" "$(dirname "$LOG_FILE")"
