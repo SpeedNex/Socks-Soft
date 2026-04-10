@@ -380,7 +380,7 @@ default_cfg = {
     "socks": {"host": "0.0.0.0", "port": 13010, "allow_no_auth": False},
     "web": {
         "base_url": "https://web.example.com",
-        "bootstrap_path": "/api/gateway/bootstrap",
+        "bootstrap_path": "/api/clients/gateway/bootstrap",
         "gateway_secret": "",
         "token": "",
         "poll_interval_seconds": 30,
