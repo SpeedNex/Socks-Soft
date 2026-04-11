@@ -203,7 +203,9 @@ require_manual_stop_if_running() {
   if [[ -n "$found_pid" ]]; then
     echo "检测到代理已在运行 (PID: ${found_pid})。"
     echo "为避免重复运行/覆盖，请先手动停止代理后再执行安装脚本。"
-    echo "关闭正在运行的服务: systemctl stop ${SERVICE_NAME:-socks-proxy-${AGENT_ID}.service} && pkill -f '${BIN_PATH}' || true"
+    echo "关闭所有代理客户端命令："
+    echo "systemctl list-units --type=service | grep socks-proxy | awk '{print \$1}' | xargs -r systemctl stop"
+    echo "pkill -f socks-proxy || true"
     exit 1
   fi
 }
