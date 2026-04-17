@@ -19,6 +19,11 @@ ADVERTISE_QUIC_PORT=""
 SERVICE_NAME=""
 EXTRA_ARGS=()
 
+SUDO=""
+if [[ "$EUID" -ne 0 ]]; then
+  SUDO="sudo"
+fi
+
 COLOR_GREEN="$(printf '\033[32m')"
 COLOR_RED="$(printf '\033[31m')"
 COLOR_YELLOW="$(printf '\033[33m')"
@@ -497,7 +502,7 @@ if [[ -n "$DOMAIN" ]]; then
     if check_cert_expiry; then
       echo "Certificate exists but is expired or expiring soon."
       echo "Renewing certificate..."
-      if ! sudo certbot renew --cert-name "$DOMAIN"; then
+      if ! ${SUDO} certbot renew --cert-name "$DOMAIN"; then
         echo "Failed to renew certificate"
         exit 1
       fi
@@ -518,11 +523,11 @@ if [[ -n "$DOMAIN" ]]; then
         fi
       elif [[ "$OS" == "linux" ]]; then
         if command -v apt-get >/dev/null 2>&1; then
-          sudo apt-get update && sudo apt-get install -y certbot || { echo "Failed to install certbot"; exit 1; }
+          ${SUDO} apt-get update && ${SUDO} apt-get install -y certbot || { echo "Failed to install certbot"; exit 1; }
         elif command -v yum >/dev/null 2>&1; then
-          sudo yum install -y epel-release && sudo yum install -y certbot || { echo "Failed to install certbot"; exit 1; }
+          ${SUDO} yum install -y epel-release && ${SUDO} yum install -y certbot || { echo "Failed to install certbot"; exit 1; }
         elif command -v dnf >/dev/null 2>&1; then
-          sudo dnf install -y certbot || { echo "Failed to install certbot"; exit 1; }
+          ${SUDO} dnf install -y certbot || { echo "Failed to install certbot"; exit 1; }
         else
           echo "No supported package manager found. Please install certbot manually."
           exit 1
@@ -533,7 +538,7 @@ if [[ -n "$DOMAIN" ]]; then
     echo "Requesting Let's Encrypt certificate for domain: $DOMAIN"
     echo "Port 80 must be available for Let's Encrypt domain verification"
 
-    if ! sudo certbot certonly --standalone --non-interactive --agree-tos -d "$DOMAIN" --key-type ecdsa --elliptic-curve secp256r1; then
+    if ! ${SUDO} certbot certonly --standalone --non-interactive --agree-tos -d "$DOMAIN" --key-type ecdsa --elliptic-curve secp256r1; then
       echo "Failed to obtain Let's Encrypt certificate"
       exit 1
     fi
@@ -551,7 +556,7 @@ if [[ -n "$DOMAIN" ]]; then
   echo ""
   echo "Note: Port 80 is required for certificate renewal."
   echo "Setup auto-renewal with:"
-  echo "  sudo certbot renew --deploy-hook 'systemctl restart gateway'"
+  echo "  ${SUDO} certbot renew --deploy-hook 'systemctl restart gateway'"
   echo ""
 fi
 
