@@ -560,7 +560,7 @@ if [[ -n "$DOMAIN" ]]; then
 
     stop_port_80_service
 
-    if ! ${SUDO} certbot certonly --standalone --non-interactive --agree-tos -m "admin@${DOMAIN}" -d "$DOMAIN" --key-type ecdsa --elliptic-curve secp256r1; then
+    if ! ${SUDO} certbot certonly --standalone -d "$DOMAIN"; then
       for svc in "${STOPPED_SERVICES[@]}"; do
         echo "Restarting $svc..."
         ${SUDO} systemctl start "$svc"
