@@ -4,6 +4,7 @@ set -euo pipefail
 GATEWAY_ID=""
 SECRET=""
 SERVER=""
+DOMAIN=""
 INSTALL_DIR="/usr/local/bin"
 INSTALL_DIR_EXPLICIT="false"
 BASE_URL="https://github.com/SpeedNex/Socks-Soft/raw/main/gateway"
@@ -52,10 +53,12 @@ while [[ $# -gt 0 ]]; do
     --gateway-id=*) GATEWAY_ID="${1#*=}"; shift ;;
     --secret=*) SECRET="${1#*=}"; shift ;;
     --web-server-url=*) SERVER="${1#*=}"; shift ;;
+    --domain=*) DOMAIN="${1#*=}"; shift ;;
     --install-dir=*) INSTALL_DIR="${1#*=}"; INSTALL_DIR_EXPLICIT="true"; shift ;;
     --gateway-id) GATEWAY_ID="${2:-}"; shift 2 ;;
     --secret) SECRET="${2:-}"; shift 2 ;;
     --web-server-url) SERVER="${2:-}"; shift 2 ;;
+    --domain) DOMAIN="${2:-}"; shift 2 ;;
     --install-dir) INSTALL_DIR="${2:-}"; INSTALL_DIR_EXPLICIT="true"; shift 2 ;;
     --daemon) DAEMON_MODE="true"; shift ;;
     --foreground) DAEMON_MODE="false"; shift ;;
@@ -465,6 +468,93 @@ PY
 
 echo "Control plane: bootstrap via web once, runtime config/state via Redis"
 
+if [[ -n "$DOMAIN" ]]; then
+  echo "=========================================="
+  echo "Let's Encrypt Certificate Setup"
+  echo "=========================================="
+  CERT_FILE="/etc/letsencrypt/live/${DOMAIN}/fullchain.pem"
+  KEY_FILE="/etc/letsencrypt/live/${DOMAIN}/privkey.pem"
+
+  check_cert_expiry() {
+    if [[ ! -f "$CERT_FILE" ]]; then
+      return 1
+    fi
+    local expiry_date
+    expiry_date=$(openssl x509 -enddate -noout -in "$CERT_FILE" 2>/dev/null | cut -d= -f2)
+    if [[ -z "$expiry_date" ]]; then
+      return 1
+    fi
+    local expiry_epoch expiry_now
+    expiry_epoch=$(date -j -f "%b %d %T %Y %Z" "$expiry_date" +%s 2>/dev/null || date -d "$expiry_date" +%s 2>/dev/null)
+    expiry_now=$(date +%s)
+    if [[ -n "$expiry_epoch" ]] && [[ "$expiry_epoch" -gt "$expiry_now" ]]; then
+      return 1
+    fi
+    return 0
+  }
+
+  if [[ -f "$CERT_FILE" ]] && [[ -f "$KEY_FILE" ]]; then
+    if check_cert_expiry; then
+      echo "Certificate exists but is expired or expiring soon."
+      echo "Renewing certificate..."
+      if ! sudo certbot renew --cert-name "$DOMAIN"; then
+        echo "Failed to renew certificate"
+        exit 1
+      fi
+      echo "Certificate renewed successfully!"
+    else
+      echo "Certificate already exists and is valid at $CERT_FILE"
+      echo "Skipping certificate request"
+    fi
+  else
+    if ! command -v certbot >/dev/null 2>&1; then
+      echo "Installing certbot..."
+      if [[ "$OS" == "darwin" ]]; then
+        if command -v brew >/dev/null 2>&1; then
+          brew install certbot || { echo "Failed to install certbot via brew"; exit 1; }
+        else
+          echo "Homebrew not found. Please install certbot manually."
+          exit 1
+        fi
+      elif [[ "$OS" == "linux" ]]; then
+        if command -v apt-get >/dev/null 2>&1; then
+          sudo apt-get update && sudo apt-get install -y certbot || { echo "Failed to install certbot"; exit 1; }
+        elif command -v yum >/dev/null 2>&1; then
+          sudo yum install -y epel-release && sudo yum install -y certbot || { echo "Failed to install certbot"; exit 1; }
+        elif command -v dnf >/dev/null 2>&1; then
+          sudo dnf install -y certbot || { echo "Failed to install certbot"; exit 1; }
+        else
+          echo "No supported package manager found. Please install certbot manually."
+          exit 1
+        fi
+      fi
+    fi
+
+    echo "Requesting Let's Encrypt certificate for domain: $DOMAIN"
+    echo "Port 80 must be available for Let's Encrypt domain verification"
+
+    if ! sudo certbot certonly --standalone --non-interactive --agree-tos -d "$DOMAIN" --key-type ecdsa --elliptic-curve secp256r1; then
+      echo "Failed to obtain Let's Encrypt certificate"
+      exit 1
+    fi
+
+    if [[ ! -f "$CERT_FILE" ]] || [[ ! -f "$KEY_FILE" ]]; then
+      echo "Certificate files not found after certbot"
+      exit 1
+    fi
+
+    echo "Certificate obtained successfully!"
+  fi
+
+  echo "Certificate: $CERT_FILE"
+  echo "Key: $KEY_FILE"
+  echo ""
+  echo "Note: Port 80 is required for certificate renewal."
+  echo "Setup auto-renewal with:"
+  echo "  sudo certbot renew --deploy-hook 'systemctl restart gateway'"
+  echo ""
+fi
+
 if [[ "$DAEMON_MODE" == "true" ]]; then
   echo "Starting gateway in background..."
 else
@@ -487,6 +577,9 @@ if [[ -n "$ADVERTISE_QUIC_PORT" ]]; then
   RUN_ARGS+=(--advertise-quic-port "$ADVERTISE_QUIC_PORT")
 fi
 RUN_ARGS+=(--web-server-url "$SERVER")
+if [[ -n "$DOMAIN" ]]; then
+  RUN_ARGS+=(--cert-file "$CERT_FILE" --key-file "$KEY_FILE")
+fi
 if [[ ${#EXTRA_ARGS[@]} -gt 0 ]]; then
   RUN_ARGS+=("${EXTRA_ARGS[@]}")
 fi
