@@ -538,10 +538,41 @@ if [[ -n "$DOMAIN" ]]; then
     echo "Requesting Let's Encrypt certificate for domain: $DOMAIN"
     echo "Port 80 must be available for Let's Encrypt domain verification"
 
+    STOPPED_SERVICES=()
+    stop_port_80_service() {
+      if command -v ss >/dev/null 2>&1; then
+        PROCESS=$(ss -tlnp 2>/dev/null | grep ':80 ' | head -1)
+      elif command -v netstat >/dev/null 2>&1; then
+        PROCESS=$(netstat -tlnp 2>/dev/null | grep ':80 ' | head -1)
+      else
+        return 0
+      fi
+      if [[ -n "$PROCESS" ]]; then
+        for svc in apache2 nginx httpd; do
+          if systemctl is-active --quiet "$svc" 2>/dev/null; then
+            echo "Stopping $svc to free port 80..."
+            ${SUDO} systemctl stop "$svc"
+            STOPPED_SERVICES+=("$svc")
+          fi
+        done
+      fi
+    }
+
+    stop_port_80_service
+
     if ! ${SUDO} certbot certonly --standalone --non-interactive --agree-tos -m "admin@${DOMAIN}" -d "$DOMAIN" --key-type ecdsa --elliptic-curve secp256r1; then
+      for svc in "${STOPPED_SERVICES[@]}"; do
+        echo "Restarting $svc..."
+        ${SUDO} systemctl start "$svc"
+      done
       echo "Failed to obtain Let's Encrypt certificate"
       exit 1
     fi
+
+    for svc in "${STOPPED_SERVICES[@]}"; do
+      echo "Restarting $svc..."
+      ${SUDO} systemctl start "$svc"
+    done
 
     if [[ ! -f "$CERT_FILE" ]] || [[ ! -f "$KEY_FILE" ]]; then
       echo "Certificate files not found after certbot"
