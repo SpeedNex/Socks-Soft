@@ -538,7 +538,7 @@ if [[ -n "$DOMAIN" ]]; then
     echo "Requesting Let's Encrypt certificate for domain: $DOMAIN"
     echo "Port 80 must be available for Let's Encrypt domain verification"
 
-    if ! ${SUDO} certbot certonly --standalone --non-interactive --agree-tos --register-unsafely-without-email -d "$DOMAIN" --key-type ecdsa --elliptic-curve secp256r1; then
+    if ! ${SUDO} certbot certonly --standalone --non-interactive --agree-tos -m "admin@${DOMAIN}" -d "$DOMAIN" --key-type ecdsa --elliptic-curve secp256r1; then
       echo "Failed to obtain Let's Encrypt certificate"
       exit 1
     fi
